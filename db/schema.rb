@@ -14,6 +14,10 @@
 ActiveRecord::Schema.define(version: 20170306172253) do
 
   create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "date"
+    t.text     "description"
+    t.text     "ingredients"
   end
 
 end
