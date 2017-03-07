@@ -2,18 +2,18 @@
 %h1 All Events
 
 %table#events
-    %thead
-        %tr
-            %th Event Title
-            %th Date
-            %th More Info
-    %tbody
-        - @events.each do |event|
-            %tr
-                %td = event.name
-                %td = event.date
-                # %td = link_to "More about #{event.name}",event_path(event)
+  %thead
+    %tr
+      %th Event Title
+      %th Date
+      %th More Info
+  %tbody
+    - @events.each do |event|
+      %tr
+        %td= event.name
+        %td= event.date
+        -# %td = link_to "More about #{event.name}",event_path(event)
                 
-# = link_to 'Add new Event', new_event_path                 
+-# = link_to 'Add new Event', new_event_path                 
 
 
