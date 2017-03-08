@@ -971,3 +971,11 @@ Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8
 
 
 Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 128.226.119.250 at 2017-03-08 23:07:16 +0000
+
+
+Started GET "/" for 128.226.119.250 at 2017-03-08 23:23:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (15.8ms)
+Completed 200 OK in 364ms (Views: 345.2ms | ActiveRecord: 0.8ms)
