@@ -15,7 +15,6 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails', '3.3.2'
   gem 'ZenTest', '4.11.0'
-  gem 'turbolinks'
 end
 
 group :test do
@@ -37,7 +36,7 @@ gem 'uglifier', '>= 2.7.1'
 
 gem 'jquery-rails'
 gem 'haml'
-
+gem 'turbolinks'
 # Use unicorn as the web server
 # gem 'unicorn'
 
