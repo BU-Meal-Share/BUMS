@@ -1,6 +1,4 @@
-BUMS::Application.routes.draw do
+Rails.application.routes.draw do
+  root 'event#index'
   resources :events
-  # map '/' to be a redirect to '/movies'
-  root :to => redirect('/events')
 end
-
