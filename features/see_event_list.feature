@@ -18,8 +18,8 @@ Background: events have been added to the database
 Scenario: See Events on home page
   When I go to the BUMS home page
   Then I should see all the events
-  #And I should see "Who Wants Some Grub?"
-  #And I should see "Food Co-op: Wednesday Lunch"
-  #And I should see "Vegans ONLY!"
-  #And I should see "Dinner on Main St"
+  And I should see "Who Wants Some Grub?"
+  And I should see "Food Co-op: Wednesday Lunch"
+  And I should see "Vegans ONLY!"
+  And I should see "Dinner on Main St"
   

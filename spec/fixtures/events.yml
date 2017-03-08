@@ -1,0 +1,14 @@
+vegan_potluck:
+    id: 1
+    name: Vegan Potluck!
+    date: 25-Nov-2017
+
+meat_festival:
+    id: 2
+    name: Meat your maker
+    date: 20-Oct-2017
+
+taco_tuesday:
+    id: 3
+    name: Mexican marathon
+    date: 5-May-2017

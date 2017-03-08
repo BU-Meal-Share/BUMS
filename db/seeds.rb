@@ -16,9 +16,9 @@ events = [{:name => 'Who Wants Some Grub?', :date => '25-Nov-1992'},
       	  {:name => '2001: A Space Odyssey', :date => '6-Apr-1968'},
       	  {:name => 'The Incredibles', :date => '5-Nov-2004'},
       	  {:name => 'Raiders of the Lost Ark', :date => '12-Jun-1981'},
-      	  {:name => 'Chicken Run', :date => '21-Jun-2000'},
-  	 ]
+      	  {:name => 'Chicken Run', :date => '21-Jun-2000'}
+      	 ]
 
 events.each do |event|
- # Event.create!(event)
+  Event.create!(event)
 end
