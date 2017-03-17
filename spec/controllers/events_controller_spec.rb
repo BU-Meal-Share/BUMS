@@ -24,5 +24,30 @@ describe EventsController do
         end
       end
     end
+    describe "#show" do
+      fixtures :events
+      
+      before :each do
+        @event = events(:vegan_potluck)
+        @id = @event.id
+        @name = @event.name
+        @date = @event.date
+        @description = @event.description
+        @ingredients = @event.ingredients
+      end
+      
+      context 'finds all events on homepage' do
+      
+        it "finds the event" do
+          expect(Event).to receive(:find).with(@id.to_s).and_return(@event)
+          get :show,  {:id => @id}
+        end
+        
+        it "sends event to view" do
+          get :show, {:id => @id}
+          expect(assigns(:event)).to eq(@event)
+        end
+      end
+    end
 end 
 

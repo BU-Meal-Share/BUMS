@@ -10,10 +10,9 @@
   %tbody
     - @events.each do |event|
       %tr
-        %td= event.name
+        %td= link_to "#{event.name}", event_path(event)
         %td= event.date
-        -# %td = link_to "More about #{event.name}",event_path(event)
-                
+        
 -# = link_to 'Add new Event', new_event_path                 
 
 
