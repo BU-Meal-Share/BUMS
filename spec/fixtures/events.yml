@@ -2,13 +2,19 @@ vegan_potluck:
     id: 1
     name: Vegan Potluck!
     date: 25-Nov-2017
+    description: Hi I love Vegan Food!
+    ingredients:  lettuce, onion, tomato, soy
 
 meat_festival:
     id: 2
     name: Meat your maker
     date: 20-Oct-2017
+    description: Jordan's birthday dinner!
+    ingredients: saussage, steak, chicken mofongo
 
 taco_tuesday:
     id: 3
     name: Mexican marathon
     date: 5-May-2017
+    description: Taco Tuesday, but not on a Tuesday...
+    ingredients: tacos, burritos, chimichangas
