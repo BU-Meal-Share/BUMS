@@ -1,11 +1,11 @@
 -# in app/views/events/show.html.haml
 
-%h2= @event.title
+%h2= @event.name
 
 %ul#details
   %li
     Date:
-    = @event.release_date.strftime("%d-%b-%Y")
+    = @event.date.strftime("%d-%b-%Y")
   %li
     Ingredients:
     = @event.ingredients
@@ -17,4 +17,4 @@
 -#= link_to 'Edit', edit_movie_path(@movie)
 -#= link_to 'Find Movies With Same Director', find_same_director_movie_path(@movie)
 -#= button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
-= link_to 'Back to list of all events', events_path
+= link_to 'Back to Home', root_path

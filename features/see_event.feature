@@ -23,6 +23,6 @@ Scenario: Viewing An Event
   And I should see "Date: 25-Nov-2017"
 
 Scenario: Return to Home Page
-  Given I am on an Event Page
-  When I press "Back to Home"
-  Then I should be on the Home Page
+  When I follow "Who Wants Some Grub?"
+  And I follow "Back to Home"
+  Then I should be on the BUMS home page
