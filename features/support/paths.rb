@@ -15,6 +15,9 @@ module NavigationHelpers
 
     when /^the BUMS home page$/ then '/events'
     
+    
+    when /^the create page$/ then '/events/new'
+      
     #when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
     #when /^the movies page$/ then '/movies'
       
