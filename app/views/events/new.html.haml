@@ -1,17 +1,8 @@
 %h1 Create New Event
 
-= form_tag events_path do
+= form_tag events_path() do
 
-  = label :event, :name, 'Event Title'
-  = text_field :event, 'title'
-
-  = label :event, :date, 'Event Date'
-  = date_select :event, :event_date
-
-  = label :event, :description, 'Event Description'
-  = text_field :event, 'description'
-  
-  = label :event, :ingredients, 'Ingredients/Recipe'
-  = text_field :event, 'ingredients/recipe'
+  = render :partial => 'event_partial'
 
   = submit_tag 'Save'
+  = link_to 'Cancel', events_path
