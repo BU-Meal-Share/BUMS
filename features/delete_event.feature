@@ -19,4 +19,5 @@ Scenario: Canceling An Event
   Given I am on the Event Page for "Vegans ONLY!"
   When I press "Cancel Event"
   Then I should be on the BUMS home page
-  And I should not see "Vegans ONLY!"
+  And I should see "Event 'Vegans ONLY!' deleted"
+  And I should not see "Vegans ONLY!" after "Event Title"

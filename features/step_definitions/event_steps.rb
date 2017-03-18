@@ -36,6 +36,12 @@ end
 #  end
 #end
 
+Then /I should not see "([^"]*)" after "([^"]*)"/ do |event_name, event_header|
+  index = page.body.index("#{event_header}")
+  search_string = page.body[index..page.body.length]
+  expect(search_string.include?(event_name)) == false
+end
+
 Then /I should see all the events/ do
   # Make sure that all the movies in the app are visible in the table
   expect(page).to have_selector('tbody tr', count: Event.count)
