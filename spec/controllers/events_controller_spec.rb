@@ -49,5 +49,42 @@ describe EventsController do
         end
       end
     end
+    
+    
+    describe "#destroy" do
+      fixtures :events
+      
+      before :each do
+        @event = events(:vegan_potluck)
+        @id = @event.id
+        @name = @event.name
+        @date = @event.date
+        @description = @event.description
+        @ingredients = @event.ingredients
+      end
+      
+      it "calls the find method to retrieve the event" do 
+        expect(Event).to receive(:find).with(@id.to_s).and_return(@event)
+        get :destroy,  {:id => @id}
+      end 
+      
+      it "calls the destroy method to delete the event" do 
+        allow(Event).to receive(:find).with(@id.to_s).and_return(@event)
+        expect(@event).to receive(:destroy)
+        get :destroy,  {:id => @id}
+      end
+      
+      it "sets the flash message" do
+        allow(Event).to receive(:find).with(@id.to_s).and_return(@event)
+        allow(@event).to receive(:destroy)
+        get :destroy,  {:id => @id}
+        expect(flash[:notice]).to eq("Event '#{@name}' deleted")
+      end 
+      
+      it "redirects to the index page" do
+        get :destroy,  {:id => @id}
+        expect(response).to redirect_to(events_path)
+      end 
+    end
 end 
 

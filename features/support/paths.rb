@@ -13,7 +13,12 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /^the BUMS home page$/ then '/events'
+    when /^the BUMS home page$/ #Issue 9
+      events_path
+      
+    #I am on the Event Page
+    when /^the Event Page for "([^"]*)"$/
+      event_path Event.find_by_name($1)
     
     #when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
     #when /^the movies page$/ then '/movies'
