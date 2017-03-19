@@ -1136,3 +1136,2038 @@ Processing by EventsController#index as HTML
   [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events"
   Rendered events/index.html.haml within layouts/application (16.9ms)
 Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 15:55:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  Rendered events/index.html.haml within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/BUMS/app/views/events/index.html.haml:16: syntax error, unexpected '=', expecting keyword_end
+ = link_to 'Add new Event', new_event_path
+  ^):
+  app/views/events/index.html.haml:16: syntax error, unexpected '=', expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.4ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 15:56:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (33.3ms)
+Completed 200 OK in 301ms (Views: 286.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 24.94.56.105 at 2017-03-18 15:56:38 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 24.94.56.105 at 2017-03-18 15:56:38 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 24.94.56.105 at 2017-03-18 15:56:38 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 24.94.56.105 at 2017-03-18 15:56:38 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 24.94.56.105 at 2017-03-18 15:56:38 +0000
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 15:57:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (35.6ms)
+Completed 200 OK in 306ms (Views: 289.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 15:57:14 +0000
+Processing by EventsController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template events/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml]}. Searched in:
+  * "/home/ubuntu/workspace/BUMS/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (39.3ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 16:34:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (50.2ms)
+Completed 200 OK in 345ms (Views: 325.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 16:34:15 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 28ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 16:35:40 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (31.9ms)
+Completed 200 OK in 274ms (Views: 256.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 16:35:42 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (15.6ms)
+Completed 200 OK in 31ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 16:47:10 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (39.2ms)
+Completed 200 OK in 264ms (Views: 231.8ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 16:47:11 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (16.5ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 16:47:14 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 16:51:47 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (45.8ms)
+Completed 200 OK in 340ms (Views: 319.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 16:51:48 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (16.3ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 24.94.56.105 at 2017-03-18 16:51:51 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"puOlYGgV+vP+zuR8sufhQiEGknwqb3wYE+BN9Wcgcp1ZyvHoJZANwHIGQnw5/+LzGbOxpITTtufv61XtiiLo6w==", "event"=>{"title"=>"gh", "event_date(1i)"=>"2017", "event_date(2i)"=>"3", "event_date(3i)"=>"18", "description"=>"", "ingredients/recipe"=>""}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template events/create, application/create with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml]}. Searched in:
+  * "/home/ubuntu/workspace/BUMS/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (44.3ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 16:58:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (31.3ms)
+Completed 200 OK in 295ms (Views: 280.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 16:58:28 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (14.0ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 24.94.56.105 at 2017-03-18 16:58:31 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xeeD+f9RTNnEVTPm/9+zTMekQblhdRsi787R5PCE/Hg6ztdxstS76kidleZ0x7D9/xFiYc/J0d0Txcn8HYZmDg==", "event"=>{"title"=>"gh", "event_date(1i)"=>"2017", "event_date(2i)"=>"3", "event_date(3i)"=>"18", "description"=>"", "ingredients/recipe"=>""}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template events/create, application/create with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml]}. Searched in:
+  * "/home/ubuntu/workspace/BUMS/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (42.2ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 16:59:33 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (33.1ms)
+Completed 200 OK in 256ms (Views: 224.7ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 16:59:35 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 24.94.56.105 at 2017-03-18 16:59:38 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oueM+LCc5SF6ORYnlm86hBh6hPLjtpL20ThoXqr8wKBdzthw/RkSEvbxsCcddzk1IM+nKk0KWAktM3BGR/5a1g==", "event"=>{"title"=>"asd", "event_date(1i)"=>"2017", "event_date(2i)"=>"3", "event_date(3i)"=>"18", "description"=>"asddsa", "ingredients/recipe"=>"das"}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `event_params' for #<EventsController:0x007fca0a7a9af0>
+Did you mean?  event_path):
+  app/controllers/events_controller.rb:16:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.8ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 17:02:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (1.0ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (45.6ms)
+Completed 200 OK in 313ms (Views: 292.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 17:02:15 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (18.1ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 24.94.56.105 at 2017-03-18 17:02:19 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83XbEiXKtEQ+dez80bby9HX2wUhxAA4MTbqNupDMgNYMXI+aaE9Dd7K9SvxarvFFTUPikN+8xPOxsZWifc4aoA==", "event"=>{"title"=>"gh", "event_date(1i)"=>"2017", "event_date(2i)"=>"3", "event_date(3i)"=>"18", "description"=>"gh", "ingredients/recipe"=>"gh"}, "commit"=>"Save"}
+Unpermitted parameters: event_date(1i), event_date(2i), event_date(3i), ingredients/recipe
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'title' for Event.):
+  app/controllers/events_controller.rb:21:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.6ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 17:04:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (33.0ms)
+Completed 200 OK in 251ms (Views: 237.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 17:04:40 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 24.94.56.105 at 2017-03-18 17:04:44 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r02PfQ+oZU9qW6kYZYU690BAfb14aZZZMr8QTqFZ/opQZNv1Qi2SfOaTDxjunTlGePVeZdbVXKbOtAhWTFtk/A==", "event"=>{"title"=>"gh", "event_date(1i)"=>"2017", "event_date(2i)"=>"3", "event_date(3i)"=>"18", "description"=>"gh", "ingredients/recipe"=>"gh"}, "commit"=>"Save"}
+Unpermitted parameters: title, event_date(1i), event_date(2i), event_date(3i), ingredients/recipe
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "events" ("description") VALUES (?)  [["description", "gh"]]
+  [1m[36m (11.2ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 12.5ms)
+
+NoMethodError (undefined method `title' for #<Event:0x007f68827b1af0>):
+  app/controllers/events_controller.rb:22:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.1ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 17:05:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (34.4ms)
+Completed 200 OK in 283ms (Views: 268.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 17:05:49 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (14.1ms)
+Completed 200 OK in 28ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 24.94.56.105 at 2017-03-18 17:05:53 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rDN8sLDCEXiRBcW7tLGVfWUeGjne3Hmb/SaFX1uRNQFTGig4/UfmSx3NY7s/qZbMXas54XBgs2QBLZ1HtpOvdw==", "event"=>{"title"=>"hj", "event_date(1i)"=>"2017", "event_date(2i)"=>"3", "event_date(3i)"=>"18", "description"=>"hj", "ingredients/recipe"=>"hj"}, "commit"=>"Save"}
+Unpermitted parameters: title, event_date(1i), event_date(2i), event_date(3i), ingredients/recipe
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "events" ("description") VALUES (?)  [["description", "hj"]]
+  [1m[36m (13.5ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 14.2ms)
+
+NoMethodError (undefined method `title' for #<Event:0x007f4d3a7ad710>):
+  app/controllers/events_controller.rb:22:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (98.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (122.1ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 17:06:24 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (28.9ms)
+Completed 200 OK in 237ms (Views: 224.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 17:06:25 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (14.5ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 24.94.56.105 at 2017-03-18 17:06:28 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gDCL54OmdRcs101aZW1XJwtXyp/CRVyZaxdiwOaTNKN/Gd9vziOCJKAf61rudVSWM+LpR2z5lmaXHHrYC5Gu1Q==", "event"=>{"title"=>"df", "event_date(1i)"=>"2017", "event_date(2i)"=>"3", "event_date(3i)"=>"18", "description"=>"df", "ingredients/recipe"=>"df"}, "commit"=>"Save"}
+Unpermitted parameters: title, event_date(1i), event_date(2i), event_date(3i), ingredients/recipe
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "events" ("description") VALUES (?)  [["description", "df"]]
+  [1m[36m (12.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://blankspace-tmodell1.c9users.io/events
+Completed 302 Found in 22ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/events" for 24.94.56.105 at 2017-03-18 17:06:28 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 17:06:35 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 24.94.56.105 at 2017-03-18 17:06:39 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k0ZRWToNUia/8KVtVq1piojSsYp5iOvJuEiIS5GvJSVsbwXRd4ilFTM4A23dtWo7sGeSUtc0ITZEQ5BTfK2/Uw==", "event"=>{"title"=>"qqq", "event_date(1i)"=>"2017", "event_date(2i)"=>"3", "event_date(3i)"=>"18", "description"=>"qqq", "ingredients/recipe"=>"qqq"}, "commit"=>"Save"}
+Unpermitted parameters: title, event_date(1i), event_date(2i), event_date(3i), ingredients/recipe
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("description") VALUES (?)  [["description", "qqq"]]
+  [1m[36m (13.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://blankspace-tmodell1.c9users.io/events
+Completed 302 Found in 19ms (ActiveRecord: 14.4ms)
+
+
+Started GET "/events" for 24.94.56.105 at 2017-03-18 17:06:39 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 17:13:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (37.3ms)
+Completed 200 OK in 274ms (Views: 257.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 17:13:36 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (33.6ms)
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 24.94.56.105 at 2017-03-18 17:13:42 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sFpFoXABJNe7JpppPUOscnscHkB2fNks7e49nzrrY3BPcxEpPYTT5DfuPGm2W6/DQ6k9mNjAE9MR5SWH1+n5Bg==", "event"=>{"title"=>"uuu", "event_date(1i)"=>"2017", "event_date(2i)"=>"3", "event_date(3i)"=>"18", "description"=>"uuu", "ingredients/recipe"=>"uuu"}, "commit"=>"Save"}
+Unpermitted parameters: title, event_date(1i), event_date(2i), event_date(3i), ingredients/recipe
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "events" ("description") VALUES (?)  [["description", "uuu"]]
+  [1m[36m (17.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://blankspace-tmodell1.c9users.io/events
+Completed 302 Found in 33ms (ActiveRecord: 18.6ms)
+
+
+Started GET "/events" for 24.94.56.105 at 2017-03-18 17:13:43 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 18:04:50 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (31.5ms)
+Completed 200 OK in 287ms (Views: 272.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 18:04:51 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    4: 
+    5: render :partial => 'event_partial'
+    6: 
+    7:   = submit_tag 'Save'
+  app/views/events/new.html.haml:7
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (37.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.9ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 18:05:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (38.0ms)
+Completed 200 OK in 273ms (Views: 258.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 18:05:39 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 18:06:08 +0000
+Processing by EventsController#new as HTML
+  Rendered events/new.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 18:06:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.9ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (30.6ms)
+Completed 200 OK in 235ms (Views: 221.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 18:06:59 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (3.8ms)
+  Rendered events/new.html.haml within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Indenting at the beginning of the document is illegal.):
+    1:   = label :event, :name, 'Event Title'
+    2:   = text_field :event, 'title'
+    3: 
+    4:   = label :event, :date, 'Event Date'
+  app/views/events/_event_partial.html.haml:1
+  app/views/events/new.html.haml:5:in `block in _app_views_events_new_html_haml__3217788754329153391_70142372319680'
+  app/views/events/new.html.haml:3:in `_app_views_events_new_html_haml__3217788754329153391_70142372319680'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.1ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 18:07:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (41.5ms)
+Completed 200 OK in 314ms (Views: 279.9ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 18:07:32 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (11.6ms)
+  Rendered events/new.html.haml within layouts/application (18.9ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 24.94.56.105 at 2017-03-18 18:07:40 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KX8y50daE148JP1kvd82UEEKgk6jfwXMtpgqEjV/Ie3WVmZvCt/kbbDsW2Q2xzXheb+hlg3DzzNKkzIK2H27mw==", "event"=>{"title"=>"qwe", "event_date(1i)"=>"2017", "event_date(2i)"=>"3", "event_date(3i)"=>"18", "description"=>"qwe", "ingredients/recipe"=>"qwe"}, "commit"=>"Save"}
+Unpermitted parameters: title, event_date(1i), event_date(2i), event_date(3i), ingredients/recipe
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "events" ("description") VALUES (?)  [["description", "qwe"]]
+  [1m[36m (11.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://blankspace-tmodell1.c9users.io/events
+Completed 302 Found in 26ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/events" for 24.94.56.105 at 2017-03-18 18:07:41 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 18:18:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (35.0ms)
+Completed 200 OK in 292ms (Views: 278.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 18:18:43 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (12.4ms)
+  Rendered events/new.html.haml within layouts/application (18.6ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 24.94.56.105 at 2017-03-18 18:18:47 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E9Ff1o/EShxgnkTX5TTPdD1skwaXcqlZNEJ0//PRwnzs+AtewkG9L+xW4tduLMzFBdmw3jnOY6bISWznHtNYCg==", "event"=>{"name"=>"qqq", "date(1i)"=>"2017", "date(2i)"=>"3", "date(3i)"=>"18", "description"=>"qqq", "ingredients"=>"qqq"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "events" ("name", "description", "ingredients", "date") VALUES (?, ?, ?, ?)  [["name", "qqq"], ["description", "qqq"], ["ingredients", "qqq"], ["date", "2017-03-18 00:00:00.000000"]]
+  [1m[36m (11.7ms)[0m  [1mcommit transaction[0m
+Redirected to https://blankspace-tmodell1.c9users.io/events
+Completed 302 Found in 21ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/events" for 24.94.56.105 at 2017-03-18 18:18:47 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 18:18:56 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (2.1ms)
+  Rendered events/new.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 24.94.56.105 at 2017-03-18 18:19:00 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TiasX77NDUXzIA4s0TXTIfWlQyY5xAUH2gehn7HfSqmxD/jX80j6dn/oqCxaLdCQzRBg/pd4z/gmDLmHXN3Q3w==", "event"=>{"name"=>"uuu", "date(1i)"=>"2017", "date(2i)"=>"3", "date(3i)"=>"18", "description"=>"uuu", "ingredients"=>"uuu"}, "commit"=>"Save"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("name", "description", "ingredients", "date") VALUES (?, ?, ?, ?)  [["name", "uuu"], ["description", "uuu"], ["ingredients", "uuu"], ["date", "2017-03-18 00:00:00.000000"]]
+  [1m[36m (12.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://blankspace-tmodell1.c9users.io/events
+Completed 302 Found in 17ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/events" for 24.94.56.105 at 2017-03-18 18:19:00 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 77ms (Views: 76.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/22" for 24.94.56.105 at 2017-03-18 18:19:21 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 22]]
+  Rendered events/show.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 37ms (Views: 18.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/5" for 24.94.56.105 at 2017-03-18 18:19:25 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 18:28:19 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (33.6ms)
+Completed 200 OK in 283ms (Views: 266.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 18:28:25 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (11.7ms)
+  Rendered events/new.html.haml within layouts/application (17.6ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 24.94.56.105 at 2017-03-18 18:28:34 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LzjvhMR2FjpaKfOwDuIPAS5XgDn28TQNLutYJPazzE7QEbsMifPhCdbhVbCF+gywFuKj4VhN/vLS4EA8G7FWOA==", "event"=>{"name"=>"testing", "date(1i)"=>"2017", "date(2i)"=>"3", "date(3i)"=>"18", "description"=>"aaa", "ingredients"=>"bbb"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "events" ("name", "description", "ingredients", "date") VALUES (?, ?, ?, ?)  [["name", "testing"], ["description", "aaa"], ["ingredients", "bbb"], ["date", "2017-03-18 00:00:00.000000"]]
+  [1m[36m (11.7ms)[0m  [1mcommit transaction[0m
+Redirected to https://blankspace-tmodell1.c9users.io/events
+Completed 302 Found in 25ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/events" for 24.94.56.105 at 2017-03-18 18:28:34 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/24" for 24.94.56.105 at 2017-03-18 18:28:42 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 24]]
+  Rendered events/show.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/24" for 24.94.56.105 at 2017-03-18 18:28:46 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 24]]
+  Rendered events/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/events" for 24.94.56.105 at 2017-03-18 18:28:55 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"35E6dXRa7M+boRy0EFrJw0V+saDrDmdEj+X3XClb1LQguG79Od8b/BdpurSbQspyfcuSeEWyrbtz7u9ExFlOwg==", "event"=>{"name"=>"testing", "date(1i)"=>"2017", "date(2i)"=>"3", "date(3i)"=>"18", "description"=>"aaa", "ingredients"=>"bbb"}, "commit"=>"Save"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("name", "description", "ingredients", "date") VALUES (?, ?, ?, ?)  [["name", "testing"], ["description", "aaa"], ["ingredients", "bbb"], ["date", "2017-03-18 00:00:00.000000"]]
+  [1m[36m (11.7ms)[0m  [1mcommit transaction[0m
+Redirected to https://blankspace-tmodell1.c9users.io/events
+Completed 302 Found in 17ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/events" for 24.94.56.105 at 2017-03-18 18:28:55 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/25" for 24.94.56.105 at 2017-03-18 18:28:58 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 25]]
+  Rendered events/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for 24.94.56.105 at 2017-03-18 18:28:59 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 18:29:01 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (32.3ms)
+  Rendered events/new.html.haml within layouts/application (35.6ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-18 18:31:18 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (30.1ms)
+Completed 200 OK in 286ms (Views: 273.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 18:31:21 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (11.4ms)
+  Rendered events/new.html.haml within layouts/application (18.5ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 24.94.56.105 at 2017-03-18 18:31:26 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 18:31:29 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (3.0ms)
+  Rendered events/new.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 24.94.56.105 at 2017-03-18 18:31:34 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 18:31:35 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (2.9ms)
+  Rendered events/new.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 24.94.56.105 at 2017-03-18 18:31:37 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-18 18:31:42 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (3.8ms)
+  Rendered events/new.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 24.94.56.105 at 2017-03-18 18:31:43 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 149.125.30.231 at 2017-03-19 14:04:20 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 201ms (Views: 190.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/new" for 149.125.30.231 at 2017-03-19 14:04:26 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (21.1ms)
+  Rendered events/new.html.haml within layouts/application (29.6ms)
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 149.125.30.231 at 2017-03-19 14:04:33 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/5" for 149.125.30.231 at 2017-03-19 14:04:37 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/22" for 149.125.30.231 at 2017-03-19 14:04:42 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 22]]
+  Rendered events/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/11" for 149.125.30.231 at 2017-03-19 14:04:48 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered events/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new" for 149.125.30.231 at 2017-03-19 14:04:52 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (3.0ms)
+  Rendered events/new.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/15" for 149.125.30.231 at 2017-03-19 14:05:26 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 15]]
+  Rendered events/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/24" for 149.125.30.231 at 2017-03-19 14:05:29 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 24]]
+  Rendered events/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 149.125.85.9 at 2017-03-19 14:05:34 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 14:05:37 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 14:05:38 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 149.125.85.9 at 2017-03-19 14:31:19 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (16.6ms)
+Completed 200 OK in 223ms (Views: 212.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 14:31:21 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 25ms (Views: 14.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 14:31:27 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/new" for 149.125.85.9 at 2017-03-19 14:31:28 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (11.2ms)
+  Rendered events/new.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 14:31:36 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 14:31:39 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 14:32:15 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (35.4ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `edit_movie_path' for #<#<Class:0x007f7408a61318>:0x007f7409d335e0>
+Did you mean?  edit_event_path):
+    14: 
+    15: %p#description= @event.description
+    16: 
+    17: = link_to 'Edit', edit_movie_path(@movie)
+    18: = link_to 'Find Movies With Same Director', find_same_director_movie_path(@movie)
+    19: = button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
+    20: = link_to 'Back to Home', events_path
+  app/views/events/show.html.haml:17:in `_app_views_events_show_html_haml___1505952356085722176_70068178880540'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.5ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 14:32:36 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"events", :id=>nil} missing required keys: [:id]):
+    14: 
+    15: %p#description= @event.description
+    16: 
+    17: = link_to 'Edit', edit_event_path(@movie)
+    18: = link_to 'Find Movies With Same Director', find_same_director_movie_path(@movie)
+    19: = button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
+    20: = link_to 'Back to Home', events_path
+  app/views/events/show.html.haml:17:in `_app_views_events_show_html_haml___1505952356085722176_70068169326540'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.3ms)
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 14:32:39 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 14:32:40 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"events", :id=>nil} missing required keys: [:id]):
+    14: 
+    15: %p#description= @event.description
+    16: 
+    17: = link_to 'Edit', edit_event_path(@movie)
+    18: = link_to 'Find Movies With Same Director', find_same_director_movie_path(@movie)
+    19: = button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
+    20: = link_to 'Back to Home', events_path
+  app/views/events/show.html.haml:17:in `_app_views_events_show_html_haml___1505952356085722176_70068169326540'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.9ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 14:33:45 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"events", :id=>nil} missing required keys: [:id]):
+    14: 
+    15: %p#description= @event.description
+    16: 
+    17: = link_to 'Edit', edit_event_path(@movie)
+    18: = link_to 'Find Movies With Same Director', find_same_director_movie_path(@movie)
+    19: = button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
+    20: = link_to 'Back to Home', events_path
+  app/views/events/show.html.haml:17:in `_app_views_events_show_html_haml___1505952356085722176_70068169326540'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.1ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 14:33:57 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (32.6ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `find_same_director_movie_path' for #<#<Class:0x007f7408a61318>:0x00000004d339f8>
+Did you mean?  find_and_preserve_without_haml_xss):
+    15: %p#description= @event.description
+    16: 
+    17: -#= link_to 'Edit', edit_event_path(@movie)
+    18: = link_to 'Find Movies With Same Director', find_same_director_movie_path(@movie)
+    19: = button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
+    20: = link_to 'Back to Home', events_path
+  app/views/events/show.html.haml:18:in `_app_views_events_show_html_haml___1505952356085722176_40472360'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.0ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 14:34:09 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 149.125.85.9 at 2017-03-19 14:34:09 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 149.125.85.9 at 2017-03-19 14:34:09 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 149.125.85.9 at 2017-03-19 14:34:09 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 149.125.85.9 at 2017-03-19 14:34:09 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 149.125.85.9 at 2017-03-19 14:34:09 +0000
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 14:34:12 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 14:36:27 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"events", :id=>nil} missing required keys: [:id]):
+    14: 
+    15: %p#description= @event.description
+    16: 
+    17: = link_to 'Edit', edit_event_path(@movie)
+    18: -#= link_to 'Find Movies With Same Director', find_same_director_movie_path(@movie)
+    19: -#= button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
+    20: = link_to 'Back to Home', events_path
+  app/views/events/show.html.haml:17:in `_app_views_events_show_html_haml___1505952356085722176_70068134097920'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.1ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 14:42:24 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"events", :id=>nil} missing required keys: [:id]):
+    14: 
+    15: %p#description= @event.description
+    16: 
+    17: = link_to 'Edit', edit_event_path(@movie)
+    18: -#= link_to 'Find Movies With Same Director', find_same_director_movie_path(@movie)
+    19: -#= button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
+    20: = link_to 'Back to Home', events_path
+  app/views/events/show.html.haml:17:in `_app_views_events_show_html_haml___1505952356085722176_70068134097920'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.2ms)
+
+
+Started GET "/" for 149.125.30.231 at 2017-03-19 14:42:53 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/5" for 149.125.30.231 at 2017-03-19 14:43:00 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"events", :id=>nil} missing required keys: [:id]):
+    14: 
+    15: %p#description= @event.description
+    16: 
+    17: = link_to 'Edit', edit_event_path(@movie)
+    18: -#= link_to 'Find Movies With Same Director', find_same_director_movie_path(@movie)
+    19: -#= button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
+    20: = link_to 'Back to Home', events_path
+  app/views/events/show.html.haml:17:in `_app_views_events_show_html_haml___1505952356085722176_70068134097920'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.9ms)
+
+
+Started GET "/events/5" for 149.125.30.231 at 2017-03-19 14:43:06 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"events", :id=>nil} missing required keys: [:id]):
+    14: 
+    15: %p#description= @event.description
+    16: 
+    17: = link_to 'Edit', edit_event_path(@movie)
+    18: -#= link_to 'Find Movies With Same Director', find_same_director_movie_path(@movie)
+    19: -#= button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
+    20: = link_to 'Back to Home', events_path
+  app/views/events/show.html.haml:17:in `_app_views_events_show_html_haml___1505952356085722176_70068134097920'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.1ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 14:44:56 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 149.125.85.9 at 2017-03-19 14:44:56 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 149.125.85.9 at 2017-03-19 14:44:56 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 149.125.85.9 at 2017-03-19 14:44:56 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 149.125.85.9 at 2017-03-19 14:44:56 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 149.125.85.9 at 2017-03-19 14:44:56 +0000
+
+
+Started GET "/events/5/edit" for 149.125.85.9 at 2017-03-19 14:45:02 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/_event_partial.html.haml (11.8ms)
+  Rendered events/edit.html.haml within layouts/application (15.4ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/5/edit" for 149.125.85.9 at 2017-03-19 14:45:19 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/_event_partial.html.haml (3.1ms)
+  Rendered events/edit.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/5" for 149.125.30.231 at 2017-03-19 14:49:20 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/5/edit" for 149.125.30.231 at 2017-03-19 14:49:23 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/_event_partial.html.haml (2.6ms)
+  Rendered events/edit.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 149.125.30.231 at 2017-03-19 14:49:32 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/10" for 149.125.30.231 at 2017-03-19 14:49:34 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered events/show.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/10/edit" for 149.125.30.231 at 2017-03-19 14:49:35 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered events/_event_partial.html.haml (2.6ms)
+  Rendered events/edit.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/10/edit" for 149.125.30.231 at 2017-03-19 14:49:45 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered events/_event_partial.html.haml (2.6ms)
+  Rendered events/edit.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/12" for 149.125.30.231 at 2017-03-19 14:49:49 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered events/show.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 110ms (Views: 108.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/12/edit" for 149.125.30.231 at 2017-03-19 14:49:51 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered events/_event_partial.html.haml (3.2ms)
+  Rendered events/edit.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 149.125.85.9 at 2017-03-19 15:03:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (19.8ms)
+Completed 200 OK in 253ms (Views: 237.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 15:03:15 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"events", :id=>nil} missing required keys: [:id]):
+    14: 
+    15: %p#description= @event.description
+    16: 
+    17: = link_to 'Edit', edit_event_path(@movie)
+    18: -#= link_to 'Find Movies With Same Director', find_same_director_movie_path(@movie)
+    19: -#= button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
+    20: = link_to 'Back to Home', events_path
+  app/views/events/show.html.haml:17:in `_app_views_events_show_html_haml__1276626023414119306_44187860'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.7ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 15:04:02 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 149.125.85.9 at 2017-03-19 15:04:02 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 149.125.85.9 at 2017-03-19 15:04:02 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 149.125.85.9 at 2017-03-19 15:04:02 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 149.125.85.9 at 2017-03-19 15:04:02 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 149.125.85.9 at 2017-03-19 15:04:02 +0000
+
+
+Started GET "/events/5/edit" for 149.125.85.9 at 2017-03-19 15:04:05 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/_event_partial.html.haml (20.5ms)
+  Rendered events/edit.html.haml within layouts/application (39.9ms)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 149.125.85.9 at 2017-03-19 15:26:58 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (15.6ms)
+Completed 200 OK in 301ms (Views: 282.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 15:27:00 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 35ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/5/edit" for 149.125.85.9 at 2017-03-19 15:27:02 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/_event_partial.html.haml (18.5ms)
+  Rendered events/edit.html.haml within layouts/application (27.3ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/events" for 149.125.85.9 at 2017-03-19 15:27:10 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Drviitw5xA1r3ZTZ2cQnvmT6CP/W3JhYhhUwsTbKRasXNF941+9aS0NGIbEyh85qkKW5u7zUfuoQK/+PUPK5+g==", "event"=>{"name"=>"Meat", "date(1i)"=>"2017", "date(2i)"=>"11", "date(3i)"=>"22", "description"=>"lots of meat", "ingredients"=>"meat"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("name", "description", "ingredients", "date") VALUES (?, ?, ?, ?)  [["name", "Meat"], ["description", "lots of meat"], ["ingredients", "meat"], ["date", "2017-11-22 00:00:00.000000"]]
+  [1m[36m (12.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://cs445-firstw.c9users.io/events
+Completed 302 Found in 17ms (ActiveRecord: 12.8ms)
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 15:27:10 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 15:27:13 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 65ms (Views: 63.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/5/edit" for 149.125.85.9 at 2017-03-19 15:27:16 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/_event_partial.html.haml (3.7ms)
+  Rendered events/edit.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 15:27:48 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (12.1ms)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/events/26" for 149.125.85.9 at 2017-03-19 15:27:52 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 26]]
+  Rendered events/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 149.125.85.9 at 2017-03-19 15:30:01 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 197ms (Views: 184.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/26" for 149.125.85.9 at 2017-03-19 15:30:05 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 26]]
+  Rendered events/show.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 40ms (Views: 20.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events/26/edit" for 149.125.85.9 at 2017-03-19 15:30:06 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"26"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 26]]
+  Rendered events/_event_partial.html.haml (16.0ms)
+  Rendered events/edit.html.haml within layouts/application (22.9ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/events" for 149.125.85.9 at 2017-03-19 15:30:11 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iIk0ivtxeVWJIuOzodqR5MtkSfNma5QLy44vzUan6hSRBol48KfnE6G5VttKmXgwPzv4twxjcrldsODzIJ8WRQ==", "event"=>{"name"=>"Meat test", "date(1i)"=>"2017", "date(2i)"=>"11", "date(3i)"=>"22", "description"=>"lots of meat", "ingredients"=>"meat"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("name", "description", "ingredients", "date") VALUES (?, ?, ?, ?)  [["name", "Meat test"], ["description", "lots of meat"], ["ingredients", "meat"], ["date", "2017-11-22 00:00:00.000000"]]
+  [1m[36m (19.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://cs445-firstw.c9users.io/events
+Completed 302 Found in 24ms (ActiveRecord: 20.0ms)
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 15:30:11 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 15:32:46 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 149.125.85.9 at 2017-03-19 15:32:46 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 149.125.85.9 at 2017-03-19 15:32:46 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 149.125.85.9 at 2017-03-19 15:32:46 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 149.125.85.9 at 2017-03-19 15:32:46 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 149.125.85.9 at 2017-03-19 15:32:46 +0000
+
+
+Started GET "/events/27" for 149.125.85.9 at 2017-03-19 15:32:49 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 27]]
+  Rendered events/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/27/edit" for 149.125.85.9 at 2017-03-19 15:32:50 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 27]]
+  Rendered events/_event_partial.html.haml (4.8ms)
+  Rendered events/edit.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/events" for 149.125.85.9 at 2017-03-19 15:32:56 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"00KVZ+Sb12qyotoGk2vMtPzSQP97MA8Ds0jIIgHuuQvKzSiV701JLJo5b254KCVgCI3xuxE46bEldgccZ9ZFWg==", "event"=>{"name"=>"abcdefg", "date(1i)"=>"2017", "date(2i)"=>"11", "date(3i)"=>"22", "description"=>"lots of meat", "ingredients"=>"meat"}, "commit"=>"Save"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "events" ("name", "description", "ingredients", "date") VALUES (?, ?, ?, ?)[0m  [["name", "abcdefg"], ["description", "lots of meat"], ["ingredients", "meat"], ["date", "2017-11-22 00:00:00.000000"]]
+  [1m[35m (14.4ms)[0m  commit transaction
+Redirected to https://cs445-firstw.c9users.io/events
+Completed 302 Found in 19ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 15:32:56 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/28" for 149.125.85.9 at 2017-03-19 15:33:22 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 28]]
+  Rendered events/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 33ms (Views: 22.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 149.125.85.9 at 2017-03-19 15:36:03 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (14.3ms)
+Completed 200 OK in 218ms (Views: 206.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events/28" for 149.125.85.9 at 2017-03-19 15:36:06 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 28]]
+  Rendered events/show.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 28ms (Views: 17.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/28/edit" for 149.125.85.9 at 2017-03-19 15:36:07 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 28]]
+  Rendered events/_event_partial.html.haml (26.3ms)
+  Rendered events/edit.html.haml within layouts/application (35.6ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/events" for 149.125.85.9 at 2017-03-19 15:36:10 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M2XWgNSEW+1PZY06Nw9pAhF+zEY0PksdlrOEVjQclwEq6mty31LFq2f+OFLcTIDW5SF9Al42ra8AjUtoUiRrUA==", "event"=>{"name"=>"abcdef", "date(1i)"=>"2017", "date(2i)"=>"11", "date(3i)"=>"22", "description"=>"lots of meat", "ingredients"=>"meat"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("name", "description", "ingredients", "date") VALUES (?, ?, ?, ?)  [["name", "abcdef"], ["description", "lots of meat"], ["ingredients", "meat"], ["date", "2017-11-22 00:00:00.000000"]]
+  [1m[36m (13.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://cs445-firstw.c9users.io/events
+Completed 302 Found in 18ms (ActiveRecord: 14.1ms)
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 15:36:10 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 15:38:32 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 149.125.85.9 at 2017-03-19 15:38:32 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 149.125.85.9 at 2017-03-19 15:38:32 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 149.125.85.9 at 2017-03-19 15:38:32 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 149.125.85.9 at 2017-03-19 15:38:32 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 149.125.85.9 at 2017-03-19 15:38:32 +0000
+
+
+Started GET "/events/29" for 149.125.85.9 at 2017-03-19 15:38:33 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 29]]
+  Rendered events/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/29/edit" for 149.125.85.9 at 2017-03-19 15:38:35 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 29]]
+  Rendered events/_event_partial.html.haml (3.0ms)
+  Rendered events/edit.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/events/29" for 149.125.85.9 at 2017-03-19 15:38:38 +0000
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NeDZ4EcDd6wvXljWP5Zv96uBFj6Ff1f2WQK27sTVgrYsb2QSTNXp6gfF7b7U1YYjX96neu93sUTPPHnQou1+5w==", "event"=>{"name"=>"abcde", "date(1i)"=>"2017", "date(2i)"=>"11", "date(3i)"=>"22", "description"=>"lots of meat", "ingredients"=>"meat"}, "commit"=>"Save", "id"=>"29"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `update_attributes!' for nil:NilClass):
+  app/controllers/events_controller.rb:32:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.2ms)
+
+
+Started GET "/events/29/edit" for 149.125.85.9 at 2017-03-19 15:40:33 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 29]]
+  Rendered events/_event_partial.html.haml (5.0ms)
+  Rendered events/edit.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 44ms (Views: 31.2ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/events/29" for 149.125.85.9 at 2017-03-19 15:40:36 +0000
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FBWb4cCVDHToKVb29uwpS3At2/OfJVTQ1W0joUuK5SkNmiYTy0OSMsCy454dr8CfhHJqt/UtsmJDU+yfLbIZeA==", "event"=>{"name"=>"abcdef", "date(1i)"=>"2017", "date(2i)"=>"11", "date(3i)"=>"22", "description"=>"lots of meat", "ingredients"=>"meat"}, "commit"=>"Save", "id"=>"29"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 29]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://cs445-firstw.c9users.io/events
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 15:40:36 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/29" for 149.125.85.9 at 2017-03-19 15:40:48 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 29]]
+  Rendered events/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/29/edit" for 149.125.85.9 at 2017-03-19 15:40:50 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 29]]
+  Rendered events/_event_partial.html.haml (2.7ms)
+  Rendered events/edit.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/events/29" for 149.125.85.9 at 2017-03-19 15:40:55 +0000
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r5TuqCJkQVErPAoAp+jKAm95JG0SQFlrejztzBXFyXS2G1NaKbLfFwOnv2hMqyPWmyaVKXhIv9nsAiLyc/01JQ==", "event"=>{"name"=>"abcde", "date(1i)"=>"2017", "date(2i)"=>"11", "date(3i)"=>"22", "description"=>"lots of meat", "ingredients"=>"meat"}, "commit"=>"Save", "id"=>"29"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 29]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "events" SET "name" = ? WHERE "events"."id" = ?[0m  [["name", "abcde"], ["id", 29]]
+  [1m[35m (9.9ms)[0m  commit transaction
+Redirected to https://cs445-firstw.c9users.io/events
+Completed 302 Found in 15ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 15:40:55 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 149.125.85.9 at 2017-03-19 15:55:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (18.0ms)
+Completed 200 OK in 236ms (Views: 223.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/events/new" for 149.125.85.9 at 2017-03-19 15:55:25 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (18.1ms)
+  Rendered events/new.html.haml within layouts/application (24.9ms)
+Completed 200 OK in 47ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 149.125.85.9 at 2017-03-19 15:55:35 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wVippbMEott8VELzAeeh9IYUbgNArnxRKjAGX13XkEbY1xRXuNI8nVTP95vqpEggckvfRyqmmuO8DslhO+9sFw==", "event"=>{"name"=>"abc", "date(1i)"=>"2017", "date(2i)"=>"3", "date(3i)"=>"19", "description"=>"abc", "ingredients"=>"abc"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "events" ("name", "description", "ingredients", "date") VALUES (?, ?, ?, ?)  [["name", "abc"], ["description", "abc"], ["ingredients", "abc"], ["date", "2017-03-19 00:00:00.000000"]]
+  [1m[36m (11.7ms)[0m  [1mcommit transaction[0m
+Redirected to https://cs445-firstw.c9users.io/events
+Completed 302 Found in 22ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 15:55:35 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (42.0ms)
+Completed 200 OK in 70ms (Views: 68.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 149.125.30.231 at 2017-03-19 16:03:09 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (16.6ms)
+Completed 200 OK in 239ms (Views: 220.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 149.125.85.9 at 2017-03-19 16:03:10 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/5" for 149.125.30.231 at 2017-03-19 16:03:11 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 29ms (Views: 15.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 16:03:11 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/5/edit" for 149.125.30.231 at 2017-03-19 16:03:13 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/_event_partial.html.haml (27.9ms)
+  Rendered events/edit.html.haml within layouts/application (39.3ms)
+Completed 200 OK in 65ms (Views: 62.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/5/edit" for 149.125.85.9 at 2017-03-19 16:03:13 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/_event_partial.html.haml (43.5ms)
+  Rendered events/edit.html.haml within layouts/application (46.8ms)
+Completed 200 OK in 72ms (Views: 70.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for 149.125.85.9 at 2017-03-19 16:03:14 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (11.6ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events" for 149.125.30.231 at 2017-03-19 16:03:18 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 149.125.85.9 at 2017-03-19 16:04:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (15.8ms)
+Completed 200 OK in 307ms (Views: 294.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 16:04:35 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 37ms (Views: 18.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/5/edit" for 149.125.85.9 at 2017-03-19 16:04:37 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/_event_partial.html.haml (22.9ms)
+  Rendered events/edit.html.haml within layouts/application (40.4ms)
+Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/5" for 149.125.85.9 at 2017-03-19 16:04:40 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms)
