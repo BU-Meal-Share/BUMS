@@ -49,5 +49,26 @@ describe EventsController do
         end
       end
     end
+    
+    describe "#edit" do
+      fixtures :events
+      
+      before :each do
+        @event = events(:vegan_potluck)
+        @id = @event.id
+        @name = @event.name
+        @date = @event.date
+        @description = @event.description
+        @ingredients = @event.ingredients
+      end
+      
+      context 'edit the event' do
+        it "sends event to view" do
+          get :edit, {:id => @id}
+          expect(assigns(:event)).to eq(@event)
+        end
+
+      end
+    end
 end 
 

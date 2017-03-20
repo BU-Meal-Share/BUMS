@@ -15,14 +15,17 @@ module NavigationHelpers
 
     when /^the BUMS home page$/ then '/events'
     
+    
+    when /^the create page$/ then '/events/new'
+      
     #when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
     #when /^the movies page$/ then '/movies'
       
     #when /^the edit page for "(.*)"$/
     #  edit_movie_path Movie.find_by_title($1)
 
-    #when /^the details page for "(.*)"$/
-    #  movie_path Movie.find_by_title($1)
+    when /^the details page for "(.*)"$/
+      event_path Event.find_by_name($1)
 
     #when /^the Similar Movies page for "(.*)"$/
     #  find_same_director_movie_path Movie.find_by_title($1)
