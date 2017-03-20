@@ -15,10 +15,11 @@ Scenario: Navigating to Event Creation Page
 
 Scenario: Creating an Event
     Given I am on the create page
-    When I fill in "Event Title" with "Test Event"
-    And I fill in "2017-11-01" for "date"
-    And I fill in "Event Description" with "Test Description"
-    And I fill in "Ingredients/Recipe" with "Test Recipe"
+    When I fill in the following:
+        | Event Title           | Test Event        |
+        | date                  | 2017-11-01        |
+        | Event Description     | Test Description  |
+        | Ingredients/Recipe    | Test Recipe       |
     When I press "Save"
     Then I should be on the BUMS home page
     Then I should see "Event created"
