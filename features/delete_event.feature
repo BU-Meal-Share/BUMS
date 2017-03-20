@@ -1,8 +1,8 @@
-Feature: show an event
+Feature: delete an event
  
-    As a user
-    so that I can see what food an event has
-    I want to be able to view an event.
+    As a user,
+    So that I can deal with my conflict or issue that arises,
+    I want to be able to cancel an event.
 
 Background: events have been added to the database
 
@@ -15,14 +15,9 @@ Background: events have been added to the database
 
   And  I am on the BUMS home page
   
-Scenario: Viewing An Event
-  When I follow "Who Wants Some Grub?"
-  Then I should see "Who Wants Some Grub?"
-  And I should see "Ingredients: ants, grubs"
-  And I should see "Description: foo"
-  And I should see "Date: 25-Nov-2017"
-
-Scenario: Return to Home Page
-  When I follow "Who Wants Some Grub?"
-  And I follow "Back to Home"
+Scenario: Canceling An Event
+  Given I am on the Event Page for "Vegans ONLY!"
+  When I press "Cancel Event"
   Then I should be on the BUMS home page
+  And I should see "Event 'Vegans ONLY!' deleted"
+  And I should not see "Vegans ONLY!" after "Event Title"
