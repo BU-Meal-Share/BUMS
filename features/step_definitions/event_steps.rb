@@ -6,6 +6,7 @@ Given /the following events exist/ do |table|
   end                                       
 end            
 
+
 #Then(/^the director of "([^"]*)" should be "([^"]*)"$/) do |title, director|   
 #  expect(Movie.find_by_title(title).director).to eq director 
 #  # pending # Write code here that turns the phrase above into concrete actions                                         
