@@ -61,6 +61,7 @@ describe EventsController do
         @description = @event.description
         @ingredients = @event.ingredients
       end
+      
       context 'edit the event' do
         it "sends event to view" do
           get :edit, {:id => @id}
@@ -71,6 +72,16 @@ describe EventsController do
     end
       
     describe "#destroy" do
+      fixtures :events
+      
+      before :each do
+        @event = events(:vegan_potluck)
+        @id = @event.id
+        @name = @event.name
+        @date = @event.date
+        @description = @event.description
+        @ingredients = @event.ingredients
+      end
       it "calls the find method to retrieve the event" do 
         expect(Event).to receive(:find).with(@id.to_s).and_return(@event)
         get :destroy,  {:id => @id}
