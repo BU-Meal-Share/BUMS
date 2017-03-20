@@ -50,8 +50,7 @@ describe EventsController do
       end
     end
     
-    
-    describe "#destroy" do
+    describe "#edit" do
       fixtures :events
       
       before :each do
@@ -62,7 +61,16 @@ describe EventsController do
         @description = @event.description
         @ingredients = @event.ingredients
       end
+      context 'edit the event' do
+        it "sends event to view" do
+          get :edit, {:id => @id}
+          expect(assigns(:event)).to eq(@event)
+        end
+
+      end
+    end
       
+    describe "#destroy" do
       it "calls the find method to retrieve the event" do 
         expect(Event).to receive(:find).with(@id.to_s).and_return(@event)
         get :destroy,  {:id => @id}
@@ -84,7 +92,7 @@ describe EventsController do
       it "redirects to the index page" do
         get :destroy,  {:id => @id}
         expect(response).to redirect_to(events_path)
-      end 
+      end
     end
 end 
 
