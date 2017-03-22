@@ -1,6 +1,30 @@
 require 'rails_helper'
 
 describe EventsController do
+    describe "create new event" do
+      #params = {:title => "test event"}
+      let(:params) { {:name => "test event"} }
+      #event = the double   first string useless but needed
+      let(:event) { double('event', params) }
+      
+      it "calls the model method to create a new event" do
+        expect(Event).to receive(:create!).with(params).and_return(event)
+        post :create, event: params
+      end
+      
+      it "sets the flash message" do
+        allow(Event).to receive(:create!).with(params).and_return(event)
+        post :create, event: params
+        expect(flash[:notice]).to match(/^.* was successfully created.$/) 
+      end
+      
+      it "redirects to the events index" do
+        allow(Event).to receive(:create!).with(params).and_return(event)
+        post :create, event: params
+        expect(response).to redirect_to(events_path)
+      end
+    end
+    
     describe "#index" do
       fixtures :events
       

@@ -15,11 +15,11 @@ Scenario: Navigating to Event Creation Page
 
 Scenario: Creating an Event
     Given I am on the create page
-    When I fill in "Event Title" with "Test Event"
-    And I fill in "2017-11-01" for "date"
-    And I fill in "Event Description" with "Test Description"
-    And I fill in "Ingredients/Recipe" with "Test Recipe"
+    When I fill in "Event Title" with "Test Event Title"
+    When I select date field "Event Date" with "01-Nov-2017"
+    When I fill in "Event Description" with "Test Event description"
+    When I fill in "Ingredients" with "Test, text, of, ingredients"
     When I press "Save"
     Then I should be on the BUMS home page
-    Then I should see "Event created"
-    And I should see "Test Event"
+    And I should see "Test Event Title was successfully created"
+    #checks for flash message, but not for event persisted in database. Is this covered by rspec controller testing?
