@@ -1,8 +1,8 @@
-Feature: show an event
+Feature: edit an event
  
     As a user
-    so that I can see what food an event has
-    I want to be able to view an event.
+    so that I can change the name of the event
+    I want to be able to edit an event.
 
 Background: events have been added to the database
 
@@ -15,14 +15,26 @@ Background: events have been added to the database
 
   And  I am on the BUMS home page
   
-Scenario: Viewing An Event
+Scenario: Updating An Event
   When I follow "Who Wants Some Grub?"
   Then I should see "Who Wants Some Grub?"
   And I should see "Ingredients: ants, grubs"
   And I should see "Description: foo"
   And I should see "Date: 25-Nov-2017"
-
-Scenario: Return to Home Page
-  When I follow "Who Wants Some Grub?"
-  And I follow "Back to Home"
+  Then I follow "Edit"
+  When I fill in "Event Title" with "testing"
+  When I press "Save"
   Then I should be on the BUMS home page
+  And I should see "testing was successfully updated"
+  And I should see "testing"
+  And I should not see "Who Wants Some Grub?"
+  
+Scenario: Canceling an edit
+  When I follow "Who Wants Some Grub?"
+  Then I should see "Who Wants Some Grub?"
+  And I should see "Ingredients: ants, grubs"
+  And I should see "Description: foo"
+  And I should see "Date: 25-Nov-2017"
+  Then I follow "Edit"
+  Then I follow "Cancel"
+  Then I should be on the details page for "Who Wants Some Grub?"

@@ -1,0 +1,9 @@
+%h1 Create New Event
+
+= form_tag event_path(@event), :method => :put do
+
+  = render :partial => 'event_partial'
+
+  = submit_tag 'Save'
+  = link_to 'Back To Home page', events_path
+  = link_to 'Cancel', event_path(@event)
