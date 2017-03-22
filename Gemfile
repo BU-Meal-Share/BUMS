@@ -15,6 +15,8 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails', '3.3.2'
   gem 'ZenTest', '4.11.0'
+  gem 'factory_girl_rails'
+  gem 'webrat'
 end
 
 group :test do

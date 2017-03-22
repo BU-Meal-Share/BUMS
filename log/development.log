@@ -2210,3 +2210,138 @@ Processing by EventsController#index as HTML
   [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"
   Rendered events/index.html.haml within layouts/application (11.0ms)
 Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 108.183.33.196 at 2017-03-21 19:37:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (41.8ms)
+Completed 200 OK in 354ms (Views: 336.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 108.183.33.196 at 2017-03-21 19:37:08 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 108.183.33.196 at 2017-03-21 19:37:08 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 108.183.33.196 at 2017-03-21 19:37:08 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 108.183.33.196 at 2017-03-21 19:37:08 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 108.183.33.196 at 2017-03-21 19:37:08 +0000
+
+
+Started GET "/events/22" for 108.183.33.196 at 2017-03-21 19:37:42 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 22]]
+  Rendered events/show.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 45ms (Views: 23.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 108.183.33.196 at 2017-03-21 19:37:46 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (19.6ms)
+  Rendered events/new.html.haml within layouts/application (30.6ms)
+Completed 200 OK in 56ms (Views: 55.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-22 19:46:52 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (52.5ms)
+Completed 200 OK in 485ms (Views: 464.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 24.94.56.105 at 2017-03-22 19:46:52 +0000
+
+
+Started GET "/events/new" for 24.94.56.105 at 2017-03-22 19:46:54 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (42.4ms)
+  Rendered events/new.html.haml within layouts/application (53.8ms)
+Completed 200 OK in 106ms (Views: 105.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 128.226.119.250 at 2017-03-22 21:49:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (15.3ms)
+Completed 200 OK in 305ms (Views: 292.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 128.226.119.250 at 2017-03-22 21:49:38 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 128.226.119.250 at 2017-03-22 21:49:38 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 128.226.119.250 at 2017-03-22 21:49:38 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 128.226.119.250 at 2017-03-22 21:49:38 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 128.226.119.250 at 2017-03-22 21:49:38 +0000
+
+
+Started GET "/events/new" for 128.226.119.250 at 2017-03-22 21:49:40 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (15.7ms)
+  Rendered events/new.html.haml within layouts/application (30.8ms)
+Completed 200 OK in 53ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 128.226.119.250 at 2017-03-22 21:49:44 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CL9sMcwbSFy1AOdSUKGGwLm8KrXDTqFs0DWqzbgqqc1CnF0Bj9iyctO8/SSHoGdIjjXEN+h0jZ3Orl6TyMJlsg==", "event"=>{"name"=>"q", "date(1i)"=>"2017", "date(2i)"=>"3", "date(3i)"=>"22", "description"=>"q", "ingredients"=>"q"}, "commit"=>"Save"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "events" ("name", "description", "ingredients", "date") VALUES (?, ?, ?, ?)  [["name", "q"], ["description", "q"], ["ingredients", "q"], ["date", "2017-03-22 00:00:00.000000"]]
+  [1m[36m (12.6ms)[0m  [1mcommit transaction[0m
+Redirected to https://blankspace-tmodell1.c9users.io/events
+Completed 302 Found in 25ms (ActiveRecord: 13.5ms)
+
+
+Started GET "/events" for 128.226.119.250 at 2017-03-22 21:49:44 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 128.226.119.250 at 2017-03-22 22:07:21 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (19.1ms)
+Completed 200 OK in 287ms (Views: 274.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events/new" for 128.226.119.250 at 2017-03-22 22:07:46 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (16.0ms)
+  Rendered events/new.html.haml within layouts/application (25.3ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 128.226.119.250 at 2017-03-22 22:07:55 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZG8kJK/+53x2mYwdJCeskWIz5/8ONXuWZkSqO4CYxxYuTBUU7D0dUhAllmvzJk0ZVboJfSUPV2d4315l8HALaQ==", "event"=>{"name"=>"1", "date(1i)"=>"2017", "date(2i)"=>"3", "date(3i)"=>"22", "description"=>"2", "ingredients"=>"3"}, "commit"=>"Save"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "events" ("name", "description", "ingredients", "date") VALUES (?, ?, ?, ?)  [["name", "1"], ["description", "2"], ["ingredients", "3"], ["date", "2017-03-22 00:00:00.000000"]]
+  [1m[36m (12.6ms)[0m  [1mcommit transaction[0m
+Redirected to https://blankspace-tmodell1.c9users.io/events
+Completed 302 Found in 27ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/events" for 128.226.119.250 at 2017-03-22 22:07:55 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.4ms)
