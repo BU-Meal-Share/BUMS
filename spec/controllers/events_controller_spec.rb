@@ -33,6 +33,9 @@ describe EventsController do
         @event2 = events(:meat_festival)
         @event3 = events(:taco_tuesday)
         @fake_results = [@event1,@event2,@event3]
+        @fake_filtered_results = [@event2, @event3]
+        @start = '5-Jan-2017'
+        @end = '31-Oct-2017'
       end
       
       context 'finds all events on homepage' do
@@ -47,7 +50,23 @@ describe EventsController do
           expect(assigns(:events)).to eq(@fake_results)
         end
       end
+      
+      context 'filters all events on homepage' do
+      
+        it "queries for events in date range" do
+          expect(Event).to receive(:where)
+          get :index, {:start => @start, :end => @end} 
+        end
+        
+        it "returns only events within that range" do
+          allow(Event).to receive(:where).and_return(@fake_filtered_results)
+          get :index, {:start => @start, :end => @end} 
+          expect(assigns(:events)).to eq(@fake_filtered_results)
+        end
+        
+      end
     end
+    
     describe "#show" do
       fixtures :events
       

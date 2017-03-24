@@ -1,6 +1,11 @@
 -# This file is app/views/events/index.html.haml
 %h1 All Events
 
+= form_tag events_path, :method => :get, :id => 'date_range_form' do
+  %input{type: "date", required: true, name: "start"}
+  %input{type: "date", required: true, name: "end"}
+  = submit_tag 'Filter'
+
 %table#events
   %thead
     %tr
