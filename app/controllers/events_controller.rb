@@ -1,10 +1,8 @@
 class EventsController < ApplicationController
   
   def event_params
-    p params
     params.require(:event).permit(:name, :date, :description, :ingredients)
   end
-  
   
   def show
     id = params[:id]
@@ -12,14 +10,20 @@ class EventsController < ApplicationController
   end
 
   def index
-    @events = Event.all
+    @start = params[:start]
+    @end = params[:end]
+    if @start.nil? or @end.nil?
+      @events = Event.all
+    else
+      @events = Event.where(:date => @start.to_time..@end.to_time).to_a
+      p @events
+     end
   end
 
   def new
   end
 
   def create
-    p params
     @event = Event.create!(event_params)
     flash[:notice] = "#{@event.name} was successfully created."
     redirect_to events_path
