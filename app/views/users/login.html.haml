@@ -1,0 +1,12 @@
+%h1 Login
+
+= form_tag login_users_path() do
+
+  = label :user, :name, 'Username:'
+  = text_field :user, 'name'
+
+  = label :user, :password, 'Password:'
+  = text_field :user, 'password'
+
+  = submit_tag 'Login'
+  = link_to 'Cancel', events_path

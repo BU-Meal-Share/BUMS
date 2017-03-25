@@ -232,3 +232,90 @@ Processing by EventsController#index as HTML
   [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE ("events"."date" BETWEEN '2018-01-01 00:00:00.000000' AND '2017-01-01 00:00:00.000000')[0m
   Rendered events/index.html.haml within layouts/application (1.0ms)
 Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170325161030)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "password" text) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170325161030"]]
+  [1m[36m (10.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'users'` to `controller: 'users'`. (called from block (2 levels) in <top (required)> at /home/ubuntu/workspace/BUMS/config/routes.rb:8)
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'users'` to `controller: 'users'`. (called from block (2 levels) in <top (required)> at /home/ubuntu/workspace/BUMS/config/routes.rb:8)
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'users'` to `controller: 'users'`. (called from block (2 levels) in <top (required)> at /home/ubuntu/workspace/BUMS/config/routes.rb:8)
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'users'` to `controller: 'users'`. (called from block (2 levels) in <top (required)> at /home/ubuntu/workspace/BUMS/config/routes.rb:8)
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'users'` to `controller: 'users'`. (called from block (2 levels) in <top (required)> at /home/ubuntu/workspace/BUMS/config/routes.rb:8)
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'users'` to `controller: 'users'`. (called from block (2 levels) in <top (required)> at /home/ubuntu/workspace/BUMS/config/routes.rb:8)
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'users'` to `controller: 'users'`. (called from block (2 levels) in <top (required)> at /home/ubuntu/workspace/BUMS/config/routes.rb:8)
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'users'` to `controller: 'users'`. (called from block (2 levels) in <top (required)> at /home/ubuntu/workspace/BUMS/config/routes.rb:8)
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'users'` to `controller: 'users'`. (called from block (2 levels) in <top (required)> at /home/ubuntu/workspace/BUMS/config/routes.rb:8)
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'users'` to `controller: 'users'`. (called from block (2 levels) in <top (required)> at /home/ubuntu/workspace/BUMS/config/routes.rb:8)
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'users'` to `controller: 'users'`. (called from block (2 levels) in <top (required)> at /home/ubuntu/workspace/BUMS/config/routes.rb:8)
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'users'` to `controller: 'users'`. (called from block (2 levels) in <top (required)> at /home/ubuntu/workspace/BUMS/config/routes.rb:8)
+
+
+Started GET "/" for 24.94.56.105 at 2017-03-25 17:19:16 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 226ms (Views: 214.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 24.94.56.105 at 2017-03-25 17:19:17 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 24.94.56.105 at 2017-03-25 17:19:17 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 24.94.56.105 at 2017-03-25 17:19:17 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 24.94.56.105 at 2017-03-25 17:19:17 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 24.94.56.105 at 2017-03-25 17:19:17 +0000
+
+
+Started GET "/users" for 24.94.56.105 at 2017-03-25 17:19:20 +0000
+Processing by UsersController#index as HTML
+Redirected to https://hw7-jcipoll1.c9users.io/users/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 24.94.56.105 at 2017-03-25 17:19:20 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"login"}
+  Rendered users/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 24.94.56.105 at 2017-03-25 17:19:24 +0000
+Processing by UsersController#index as HTML
+Redirected to https://hw7-jcipoll1.c9users.io/users/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 24.94.56.105 at 2017-03-25 17:19:24 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"login"}
+  Rendered users/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 24.94.56.105 at 2017-03-25 17:19:27 +0000
+Processing by UsersController#index as HTML
+Redirected to https://hw7-jcipoll1.c9users.io/users/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 24.94.56.105 at 2017-03-25 17:19:27 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"login"}
+  Rendered users/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'users'` to `controller: 'users'`. (called from block (2 levels) in <top (required)> at /home/ubuntu/workspace/BUMS/config/routes.rb:8)
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'users'` to `controller: 'users'`. (called from block (2 levels) in <top (required)> at /home/ubuntu/workspace/BUMS/config/routes.rb:8)
