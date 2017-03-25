@@ -1,4 +1,7 @@
 -# This file is app/views/events/index.html.haml
+%h2
+  = link_to 'Login', login_users_path
+
 %h1 All Events
 
 = form_tag events_path, :method => :get, :id => 'date_range_form' do
@@ -19,6 +22,5 @@
         %td= event.date
         
     = link_to 'Create new event', new_event_path 
-    = link_to 'Login', login_users_path
 
 
