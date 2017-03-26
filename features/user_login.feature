@@ -15,16 +15,18 @@ Scenario: View Login Page
   Then I should see "Username:"
   And I should see "Password:"
 
-Scenario: Successful Login
-  When I follow "Login"
-  And I fill in the following:
-    |Username | tmodell |
-    |Password  | helloworld |
-  Then I should see "Welcome tmodell"
+# Scenario: Successful Login
+#   When I follow "Login"
+#   And I fill in the following:
+#     |Username | tmodell |
+#     |Password  | helloworld |
+#   Then I press "Login" 
+#   And I should see "Welcome tmodell"
 
-Scenario: Unsuccessful Login
-  When I follow "Login"
-  And I fill in the following:
-    |Username | tmodell |
-    |Password  | fail |
-  Then I should see "Login Unsuccessful"
+# Scenario: Unsuccessful Login
+#   When I follow "Login"
+#   And I fill in the following:
+#     |Username | tmodell |
+#     |Password  | fail |
+#   Then I press "Login" 
+#   Then I should see "Login Unsuccessful"

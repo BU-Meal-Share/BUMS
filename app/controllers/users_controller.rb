@@ -8,10 +8,26 @@ class UsersController < ApplicationController
   end
 
   def index
-#    redirect_to :action => 'login'
+
   end
   
   def login
+=begin    
+    @user = User.find_by_name(params[:name])
+    @password = @user.password
+    #if @password == params[:password]
+=end
+
+=begin
+    @user = User.where(name: params[:name]).where(password: params[:password])
+    if(@user)
+      flash[:notice] = 'Welcome #{user.name}'
+    else
+      flash[:warning] = 'Login Unsuccessful'
+    end
+    redirect_to(events_path)
+=end
+    
   end
 
   def new
