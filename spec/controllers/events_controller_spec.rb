@@ -34,6 +34,8 @@ describe EventsController do
         @event3 = events(:taco_tuesday)
         @fake_results = [@event1,@event2,@event3]
         @fake_filtered_results = [@event2, @event3]
+        @fake_sort_by_name = [@event2,@event3,@event1]
+        @fake_sort_by_date = [@event3,@event2,@event1]
         @start = '5-Jan-2017'
         @end = '31-Oct-2017'
       end
@@ -64,6 +66,22 @@ describe EventsController do
           expect(assigns(:events)).to eq(@fake_filtered_results)
         end
         
+      end
+      
+      context 'sort by name' do
+        
+        it "returns events sorted by name" do
+          get :index, {:name => "1"} 
+          expect(assigns(:events)).to eq(@fake_sort_by_name)
+        end
+      end
+      
+      context 'sort by date' do
+        
+        it "returns events sorted by date" do
+          get :index, {:date => "1"} 
+          expect(assigns(:events)).to eq(@fake_sort_by_date)
+        end
       end
     end
     
