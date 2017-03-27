@@ -23,6 +23,7 @@ Scenario: Viewing An Event
   And I should see "Ingredients: ants, grubs"
   And I should see "Description: foo"
   And I should see "Date: 25-Nov-2017"
+  And I should see the image "42.jpg"
 
 Scenario: Return to Home Page
   When I follow "Who Wants Some Grub?"

@@ -1080,3 +1080,33 @@ Migrating to InfoMigration (20170325142108)
   [1m[35m (10.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170325142108')
   [1m[36m (10.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170306172253')[0m
   [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+
+
+Started GET "/" for 128.226.119.250 at 2017-03-27 21:03:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 287ms (Views: 275.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 128.226.119.250 at 2017-03-27 21:03:23 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 128.226.119.250 at 2017-03-27 21:03:23 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 128.226.119.250 at 2017-03-27 21:03:24 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 128.226.119.250 at 2017-03-27 21:03:24 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 128.226.119.250 at 2017-03-27 21:03:24 +0000
+
+
+Started GET "/events/new" for 128.226.119.250 at 2017-03-27 21:03:33 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (23.5ms)
+  Rendered events/new.html.haml within layouts/application (31.7ms)
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.0ms)

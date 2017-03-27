@@ -122,8 +122,8 @@ Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
 end
 
 Then /^I should see the image "(.+)"$/ do |image|
-  #expect(page).to have_xpath("//img[contains(@src,'#{image}')]")
-    #page.should have_xpath("//img[@src=\"/assets/images/#{image}\"]")
+  image_name = image.split(".")[0]
+  expect(page).to have_xpath("//img[contains(@src,'#{image_name}')]")
 end
 
 Then /^(?:|I )should not see "([^"]*)"$/ do |text|
