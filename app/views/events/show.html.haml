@@ -7,8 +7,33 @@
     Date:
     = @event.date.strftime("%d-%b-%Y")
   %li
+    Tags:
+    = @event.tags
+  %li
     Ingredients:
     = @event.ingredients
+  %li
+    MinPartySize:
+    = @event.minPartySize
+  %li
+    CurrentPartySize:
+    = @event.curPartySize
+  %li
+    MaxPartySize:
+    = @event.maxPartySize
+  %li
+    Location:
+    = @event.location
+  %li
+    Recipe:
+    = @event.recipes
+  %li
+    =image_tag @event.image
+  
+  -#%li
+  -#  Image:
+  -#  = @event.image
+  
 
 %h3 Description:
 

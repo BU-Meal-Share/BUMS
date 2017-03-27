@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(version: 20170325161030) do
     t.datetime "date"
     t.text     "description"
     t.text     "ingredients"
+    t.integer  "minPartySize"
+    t.integer  "curPartySize"
+    t.integer  "maxPartySize"
+    t.string   "tags"
+    t.string   "location"
+    t.text     "recipes"
+    t.string   "image"
   end
 
   create_table "users", force: :cascade do |t|
