@@ -1,0 +1,9 @@
+user_tmodell:
+    id: 1
+    name: tmodell
+    password: helloworld
+    
+user_jcipoll:
+    id: 2
+    name: jcipoll
+    password: goodbyeworld
