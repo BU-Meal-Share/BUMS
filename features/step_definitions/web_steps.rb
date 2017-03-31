@@ -213,12 +213,8 @@ end
 
 Then /^the "([^"]*)" checkbox(?: within (.*))? should be checked$/ do |label, parent|
   with_scope(parent) do
-    field_checked = find_field(label)['checked']
-    if field_checked.respond_to? :should
-      field_checked.should be_true
-    else
-      assert field_checked
-    end
+    field_checked = find_field(label)
+    expect(field_checked).to be_checked
   end
 end
 
