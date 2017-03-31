@@ -23,3 +23,5 @@ Scenario: See Events filtered by date on home page
     And I should see "Who Wants Some Grub?"
     And I should not see "Vegans ONLY!"
     And I should not see "Dinner on Main St"
+    
+    

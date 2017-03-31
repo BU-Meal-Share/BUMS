@@ -10,29 +10,35 @@ class EventsController < ApplicationController
   end
 
   def index
-    @start = params[:start]
-    @end = params[:end]
-    @all_options = Event.get_sort_options
+    @sort_options = Event.sort_options
     
-    if params['name'] == nil and params['date'] == nil
-      if @start.nil? or @end.nil?
-        @events = Event.all
-      else
-        @events = Event.where(:date => @start.to_time..@end.to_time).to_a
-      end
-    elsif params['name'] == "1"
-      if @start.nil? or @end.nil?
-        @events = Event.all.order(:name)
-      else
-        @events = Event.where(:date => @start.to_time..@end.to_time).order(:name).to_a
-      end
-    elsif params['date'] == "1"
-      if @start.nil? or @end.nil?
-        @events = Event.all.order(:date)
-      else
-        @events = Event.where(:date => @start.to_time..@end.to_time).order(:date).to_a
-      end
+    #load defaults into session
+    session[:start] = '' unless session.has_key?  :start
+    session[:end]   = '' unless session.has_key?  :end
+    session[:sort]  = ['date'] unless session.has_key? :sort
+    
+    @start = params[:start] || session[:start]
+    @end   = params[:end]   || session[:end]
+    @sort  = params[:sort]  || session[:sort]
+    
+    @sort  = @sort.keys unless @sort.class == Array
+    
+    if @start.blank? or @end.blank?
+      @events = Event.all
+    else
+      @events = Event.where(:date => @start.to_time..@end.to_time)
     end
+    
+    @sort.each do |option|
+      @events = @events.order(option.to_sym) unless @events.nil? or @events.class == Array
+    end
+    
+    @events = @events.to_a
+    
+    # Save session settings
+    session[:start] = @start
+    session[:end]   = @end
+    session[:sort]  = @sort
   end
 
   def new

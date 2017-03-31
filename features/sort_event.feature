@@ -16,17 +16,16 @@ Background: events have been added to the database
   And  I am on the BUMS home page
   
 Scenario: Sort by name
-  When I check "name"
-  When I press "Sort"
+  When I check "option_name"
+  And I press "Sort"
   Then I should see "Dinner on Main St" before "Food Co-op: Wednesday Lunch"
-  Then I should see "Food Co-op: Wednesday Lunch" before "Vegans ONLY!"
-  Then I should see "Vegans ONLY!" before "Who Wants Some Grub?"
+  And I should see "Food Co-op: Wednesday Lunch" before "Vegans ONLY!"
+  And I should see "Vegans ONLY!" before "Who Wants Some Grub?"
   
 Scenario: Sort by date
-  
-  When I check "date"
-  When I press "Sort"
+  When I check "option_date"
+  And I press "Sort"
   Then I should see "Vegans ONLY!" before "Dinner on Main St"
-  Then I should see "Dinner on Main St" before "Food Co-op: Wednesday Lunch"
-  Then I should see "Food Co-op: Wednesday Lunch" before "Who Wants Some Grub?"
+  And I should see "Dinner on Main St" before "Food Co-op: Wednesday Lunch"
+  And I should see "Food Co-op: Wednesday Lunch" before "Who Wants Some Grub?"
   

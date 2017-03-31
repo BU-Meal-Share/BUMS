@@ -48,6 +48,7 @@ describe EventsController do
         end
         
         it "sends all events to view" do
+          allow(Event).to receive(:all).and_return(@fake_results)
           get :index
           expect(assigns(:events)).to eq(@fake_results)
         end
@@ -62,7 +63,7 @@ describe EventsController do
         
         it "returns only events within that range" do
           allow(Event).to receive(:where).and_return(@fake_filtered_results)
-          get :index, {:start => @start, :end => @end} 
+          get :index, {:start => @start, :end => @end}
           expect(assigns(:events)).to eq(@fake_filtered_results)
         end
         
@@ -71,18 +72,23 @@ describe EventsController do
       context 'sort by name' do
         
         it "returns events sorted by name" do
-          get :index, {:name => "1"} 
+          @fake_params = {:sort => {"name" => "1"}}
+          get :index, @fake_params
           expect(assigns(:events)).to eq(@fake_sort_by_name)
         end
+        
       end
       
       context 'sort by date' do
         
         it "returns events sorted by date" do
-          get :index, {:date => "1"} 
+          @fake_params = {:sort => {"date" => "1"}}
+          get :index, @fake_params
           expect(assigns(:events)).to eq(@fake_sort_by_date)
         end
+        
       end
+      
     end
     
     describe "#show" do

@@ -5,15 +5,15 @@
 %h1 All Events
 
 = form_tag events_path, :method => :get, :id => 'date_range_form' do
-  %input{type: "date", required: true, name: "start"}
-  %input{type: "date", required: true, name: "end"}
+  %input{type: "date", required: true, name: "start", value: @start}
+  %input{type: "date", required: true, name: "end", value: @end}
   = submit_tag 'Filter'
 
 = form_tag events_path, :method => :get, :id => "sort_form" do
   Include:
-  - @all_options.each do |option|
+  - @sort_options.each do |option|
     = option
-    = check_box_tag "#{option}"
+    = check_box_tag "sort[#{option}]", 1, @sort.include?(option), :id => "option_#{option}"
   = submit_tag 'Sort', :id => "options_submit"
 
 %table#events
