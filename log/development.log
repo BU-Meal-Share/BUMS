@@ -1084,3 +1084,489 @@ Processing by EventsController#index as HTML
   [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events" WHERE ("events"."date" BETWEEN '1995-10-20 00:00:00.000000' AND '2018-10-20 00:00:00.000000')  ORDER BY "events"."name" ASC
   Rendered events/index.html.haml within layouts/application (4.5ms)
 Completed 200 OK in 28ms (Views: 23.9ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20170325161030)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170325161030"]]
+  [1m[35m (15.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170402174344)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar, "uid" varchar, "name" varchar, "oauth_token" varchar, "oauth_expires_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170402174344"]]
+  [1m[36m (10.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+
+
+Started GET "/" for 50.58.104.40 at 2017-04-02 18:03:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 530ms (Views: 511.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.58.104.40 at 2017-04-02 18:03:46 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.58.104.40 at 2017-04-02 18:03:46 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 50.58.104.40 at 2017-04-02 18:03:46 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 50.58.104.40 at 2017-04-02 18:03:46 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 50.58.104.40 at 2017-04-02 18:03:46 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 50.58.104.40 at 2017-04-02 18:03:46 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.58.104.40 at 2017-04-02 18:03:46 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.58.104.40 at 2017-04-02 18:03:46 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 50.58.104.40 at 2017-04-02 18:03:46 +0000
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.40 at 2017-04-02 18:03:51 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.40 at 2017-04-02 18:03:51 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/" for 50.58.104.40 at 2017-04-02 18:09:59 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (Inconsistent indentation: 6 spaces used for indentation, but the rest of the document was indented using 4 spaces.):
+    2: 
+    3: %h2
+    4:     %div
+    5:       - if current_user
+    6:         Signed in as
+    7:         = succeed "!" do
+    8:           %strong= current_user.name
+  app/views/events/index.html.haml:5
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.3ms)
+
+
+Started GET "/" for 50.58.104.40 at 2017-04-02 18:13:03 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (Inconsistent indentation: 3 spaces used for indentation, but the rest of the document was indented using 2 spaces.):
+     6:     Signed in as
+     7:     = succeed "!" do
+     8:       %strong= current_user.name
+     9:    = link_to "Sign out", signout_path, id: "sign_out"
+    10:   - else
+    11:     = link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in"
+    12: %div
+  app/views/events/index.html.haml:9
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.9ms)
+
+
+Started GET "/" for 50.58.104.40 at 2017-04-02 18:13:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 217ms (Views: 198.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.40 at 2017-04-02 18:13:41 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.40 at 2017-04-02 18:13:42 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.40 at 2017-04-02 18:13:49 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.40 at 2017-04-02 18:13:50 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2/callback" for 50.58.104.40 at 2017-04-02 18:14:49 +0000
+(google_oauth2) Callback phase initiated.
+(google_oauth2) Authentication failure! csrf_detected: OmniAuth::Strategies::OAuth2::CallbackError, csrf_detected | CSRF detected
+(google_oauth2) Authentication failure! invalid_credentials: OmniAuth::Strategies::OAuth2::CallbackError, csrf_detected | CSRF detected
+
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  omniauth (1.6.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+  omniauth (1.6.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+  omniauth (1.6.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+  omniauth (1.6.1) lib/omniauth/strategy.rb:478:in `fail!'
+  omniauth-oauth2 (1.3.1) lib/omniauth/strategies/oauth2.rb:75:in `callback_phase'
+  omniauth (1.6.1) lib/omniauth/strategy.rb:230:in `callback_call'
+  omniauth (1.6.1) lib/omniauth/strategy.rb:187:in `call!'
+  omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+  omniauth (1.6.1) lib/omniauth/builder.rb:63:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.9ms)
+
+
+Started GET "/" for 50.58.104.40 at 2017-04-02 18:16:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 210ms (Views: 191.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.40 at 2017-04-02 18:16:35 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.40 at 2017-04-02 18:16:36 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.40 at 2017-04-02 18:16:47 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.40 at 2017-04-02 18:16:47 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/" for 50.58.104.40 at 2017-04-02 18:17:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 202ms (Views: 183.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.40 at 2017-04-02 18:17:15 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.40 at 2017-04-02 18:17:15 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2/callback?state=916a2f454a015f2c5c6e95d8b022644dc1576cb866f79cfa&code=4/9ojPOz6OHHq_cfRZxXf634Iy_uC_I7IZJRU9GfxKIAQ" for 50.58.104.40 at 2017-04-02 18:17:23 +0000
+(google_oauth2) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"916a2f454a015f2c5c6e95d8b022644dc1576cb866f79cfa", "code"=>"4/9ojPOz6OHHq_cfRZxXf634Iy_uC_I7IZJRU9GfxKIAQ", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["provider", "google_oauth2"], ["uid", "104961175330884005910"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("provider", "uid", "name", "oauth_token", "oauth_expires_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["provider", "google_oauth2"], ["uid", "104961175330884005910"], ["name", "Shafkat Haque"], ["oauth_token", "ya29.GlshBGHa4jbdHeGBcK7HsHR5ClMsODGgIMrzBJom0M64clUBUXeSh-tz3ZzvFY64rZTf0ZQrvLXpSwVGGIimCDvoh5RjRJsOf7nGDKC37eEqHg2y6oFaoq1ElDhp"], ["oauth_expires_at", "2017-04-02 19:17:24.000000"], ["created_at", "2017-04-02 18:17:24.386931"], ["updated_at", "2017-04-02 18:17:24.386931"]]
+  [1m[35m (14.7ms)[0m  commit transaction
+Redirected to https://rottenpotatoes-shaque20.c9users.io/
+Completed 302 Found in 33ms (ActiveRecord: 16.4ms)
+
+
+Started GET "/" for 50.58.104.40 at 2017-04-02 18:17:24 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signout" for 50.58.104.40 at 2017-04-02 18:17:31 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://rottenpotatoes-shaque20.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.58.104.40 at 2017-04-02 18:17:31 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 50.58.104.40 at 2017-04-02 18:23:26 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 251ms (Views: 227.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.40 at 2017-04-02 18:23:30 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.40 at 2017-04-02 18:23:30 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2/callback?state=1d94368881f48b408207f44fa58c8ee3598a9b33fa62d4c5&code=4/sYVS8StljeC4wmsdRmwCV6kIjl4UHL9WNrJ6bD6gOnM" for 50.58.104.40 at 2017-04-02 18:23:30 +0000
+(google_oauth2) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"1d94368881f48b408207f44fa58c8ee3598a9b33fa62d4c5", "code"=>"4/sYVS8StljeC4wmsdRmwCV6kIjl4UHL9WNrJ6bD6gOnM", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["provider", "google_oauth2"], ["uid", "104961175330884005910"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "oauth_token" = ?, "oauth_expires_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["oauth_token", "ya29.GlshBCFXtvGUt-TKeJHWoD2VNo-e9OpfXQCInE_cRi5NrPkSGgUx3YR4LhBc34w2Soj0eSY-mNAPj3ydmFjpZxJHt12d1eEVIxMraJaQ1b-5xXYtjokQqJoZMH67"], ["oauth_expires_at", "2017-04-02 19:23:30.000000"], ["updated_at", "2017-04-02 18:23:31.012590"], ["id", 1]]
+  [1m[35m (8.8ms)[0m  commit transaction
+Redirected to https://rottenpotatoes-shaque20.c9users.io/
+Completed 302 Found in 40ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/" for 50.58.104.40 at 2017-04-02 18:23:31 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.58.104.40 at 2017-04-02 18:23:31 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.58.104.40 at 2017-04-02 18:23:31 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 50.58.104.40 at 2017-04-02 18:23:31 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 50.58.104.40 at 2017-04-02 18:23:31 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.58.104.40 at 2017-04-02 18:23:31 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 50.58.104.40 at 2017-04-02 18:23:31 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 50.58.104.40 at 2017-04-02 18:23:31 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.58.104.40 at 2017-04-02 18:23:31 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 50.58.104.40 at 2017-04-02 18:23:31 +0000
+
+
+Started GET "/signout" for 50.58.104.40 at 2017-04-02 18:23:35 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://rottenpotatoes-shaque20.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.58.104.40 at 2017-04-02 18:23:35 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 149.125.110.56 at 2017-04-02 18:26:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 190ms (Views: 170.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 149.125.110.56 at 2017-04-02 18:26:08 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 149.125.110.56 at 2017-04-02 18:26:08 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 149.125.110.56 at 2017-04-02 18:26:08 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 149.125.110.56 at 2017-04-02 18:26:08 +0000
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 149.125.110.56 at 2017-04-02 18:26:08 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 149.125.110.56 at 2017-04-02 18:26:08 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 149.125.110.56 at 2017-04-02 18:26:08 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 149.125.110.56 at 2017-04-02 18:26:08 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 149.125.110.56 at 2017-04-02 18:26:08 +0000
+
+
+Started GET "/" for 149.125.110.56 at 2017-04-02 18:30:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 225ms (Views: 207.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/auth/google_oauth2" for 149.125.110.56 at 2017-04-02 18:30:32 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 149.125.110.56 at 2017-04-02 18:30:32 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2/callback?state=fcc59a5de22081cb7f9ad7b64cdcde2b16e5bb7ae236c92f&code=4/0wsUfzZ5ts7MbxtNRDsgyix-ZtKMq42Ge5AkKefUubA" for 149.125.110.56 at 2017-04-02 18:30:46 +0000
+(google_oauth2) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"fcc59a5de22081cb7f9ad7b64cdcde2b16e5bb7ae236c92f", "code"=>"4/0wsUfzZ5ts7MbxtNRDsgyix-ZtKMq42Ge5AkKefUubA", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["provider", "google_oauth2"], ["uid", "101829228650833764275"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("provider", "uid", "name", "oauth_token", "oauth_expires_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["provider", "google_oauth2"], ["uid", "101829228650833764275"], ["name", "Binghamton MealShare"], ["oauth_token", "ya29.GlshBM8weJGnH-P5kHq8hpw3Vukh3jEE07mnUzFff0vb1dyZMoquQn8uk86GTquphAucKT8X_tWcGkusl76nk4rrOr3gsnEnX3k7hrtYR34Sn2kE3UxR3PMGn1sL"], ["oauth_expires_at", "2017-04-02 19:30:46.000000"], ["created_at", "2017-04-02 18:30:46.446786"], ["updated_at", "2017-04-02 18:30:46.446786"]]
+  [1m[35m (13.8ms)[0m  commit transaction
+Redirected to https://rottenpotatoes-shaque20.c9users.io/
+Completed 302 Found in 38ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/" for 149.125.110.56 at 2017-04-02 18:30:46 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signout" for 149.125.110.56 at 2017-04-02 18:32:00 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://rottenpotatoes-shaque20.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 149.125.110.56 at 2017-04-02 18:32:00 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auth/google_oauth2" for 149.125.110.56 at 2017-04-02 18:32:12 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 149.125.110.56 at 2017-04-02 18:32:12 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2/callback?state=54349ee28f005266d4dbe815e93decc6ecebdd5861d10d86&code=4/9bjR8gmNajyfLqpRnUUYWG8roIa9V7NNt4-qibdS69g" for 149.125.110.56 at 2017-04-02 18:32:13 +0000
+(google_oauth2) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"54349ee28f005266d4dbe815e93decc6ecebdd5861d10d86", "code"=>"4/9bjR8gmNajyfLqpRnUUYWG8roIa9V7NNt4-qibdS69g", "provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "google_oauth2"], ["uid", "101829228650833764275"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "oauth_token" = ?, "oauth_expires_at" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["oauth_token", "ya29.GlshBPoUcvthq29pFUPzRU73bn2WBpV2sa7SKC2KlExGLZsZVal7eNvODYvIxq-qTItMkObGbWcO9-B3afljzs5ZmJgrfU6r1LYcTJxgBvmhD6Y5hkAjVwnFp5s7"], ["oauth_expires_at", "2017-04-02 19:32:12.000000"], ["updated_at", "2017-04-02 18:32:13.378877"], ["id", 2]]
+  [1m[36m (10.7ms)[0m  [1mcommit transaction[0m
+Redirected to https://rottenpotatoes-shaque20.c9users.io/
+Completed 302 Found in 17ms (ActiveRecord: 11.3ms)
+
+
+Started GET "/" for 149.125.110.56 at 2017-04-02 18:32:13 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered events/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 149.125.110.56 at 2017-04-02 18:32:13 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 149.125.110.56 at 2017-04-02 18:32:13 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 149.125.110.56 at 2017-04-02 18:32:13 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 149.125.110.56 at 2017-04-02 18:32:13 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 149.125.110.56 at 2017-04-02 18:32:13 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 149.125.110.56 at 2017-04-02 18:32:13 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 149.125.110.56 at 2017-04-02 18:32:13 +0000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 149.125.110.56 at 2017-04-02 18:32:13 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 149.125.110.56 at 2017-04-02 18:32:13 +0000
