@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   
   def event_params
-    params.require(:event).permit(:name, :date, :description, :ingredients, :minPartySize, :curPartySize, :maxPartySize, :tags, :recipes, :location, :image)
+    params.require(:event).permit(:name, :date, :description, :ingredients, :minPartySize, :curPartySize, :maxPartySize, :tags, :recipes, :location, :image, :tagsArray)
   end
   
   def show
