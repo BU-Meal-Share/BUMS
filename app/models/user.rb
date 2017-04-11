@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  
+  has_many :attendees
+  has_many :events, :through => :attendees
+  
   def self.from_omniauth(auth)
     user = User.find_by(uid: auth[:uid]) || User.new
     user.attributes = {

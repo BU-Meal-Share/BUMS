@@ -39,6 +39,15 @@
 
 %p#description= @event.description
 
+%table#attendees
+  %thead
+    %tr
+      %th Attendees:
+  %tbody
+    - @event.users.each do |user|
+      %tr
+        %td= user.name
+
 = link_to 'Edit', edit_event_path(@event)
 -#= link_to 'Find Movies With Same Director', find_same_director_movie_path(@movie)
 = button_to 'Cancel Event', event_path(@event), :method => :delete 
