@@ -32,12 +32,15 @@ Background: events have been added to the database
 Scenario: Viewing List of Attendees
   When I follow "Who Wants Some Grub?"
   Then I should see "Tom"
+  Then I should see "Xinghao"
+  Then I should see "Yixian"
+  Then I should not see "Joe"
   
 Scenario: Viewing Attend Event Button
   When I follow "Who Wants Some Grub?"
-  Then I should see "Attend Event?"
+  Then I should see button "Attend Event?"
 
-Scenario: Viewing Nevermind Button
+Scenario: Viewing Login Required
   When I follow "Who Wants Some Grub?"
-  And I click "Attend Event?"
-  Then I should see "Nevermind!"
+  And I press "Attend Event?"
+  Then I should see "You must be logged in to Attend an event."

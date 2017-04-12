@@ -18,9 +18,10 @@ Rails.application.routes.draw do
   #root to: "home#show"
 
 
-  
-  resources :events
   root 'events#index'
+  resources :events do
+      resources :attendees
+  end
   #resources :users do
     # Creates users/login(.:format)  users#login
   #  collection {get 'login'}

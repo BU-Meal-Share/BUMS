@@ -39,6 +39,9 @@
 
 %p#description= @event.description
 
+= button_to 'Attend Event?', event_attendees_path(@event), :method => :POST
+-#= button_to 'Attend Event?', new_event_attendee_path(@event)
+
 %table#attendees
   %thead
     %tr
