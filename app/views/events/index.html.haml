@@ -1,15 +1,15 @@
 -# This file is app/views/events/index.html.haml
 
 %h2
-%div
-  - if current_user
-    Signed in as
-    = succeed "!" do
-      %strong= current_user.name
-    = link_to "Sign out", signout_path, id: "sign_out"
-  - else
-    = link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in"
-%div
+
+- if current_user
+  Signed in as
+  = succeed "!" do
+    %strong= current_user.name
+  = link_to "Sign out", signout_path, id: "sign_out"
+- else
+  = link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in"
+
   = yield
 
   
