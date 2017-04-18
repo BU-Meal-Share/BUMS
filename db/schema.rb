@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170325161030) do
+ActiveRecord::Schema.define(version: 20170418004419) do
 
   create_table "events", force: :cascade do |t|
     t.string   "name"
@@ -21,10 +21,12 @@ ActiveRecord::Schema.define(version: 20170325161030) do
     t.integer  "minPartySize"
     t.integer  "curPartySize"
     t.integer  "maxPartySize"
-    t.string   "tags"
     t.string   "location"
     t.text     "recipes"
     t.string   "image"
+    t.string   "ethnicity"
+    t.string   "dietary_restrictions"
+    t.string   "category"
   end
 
   create_table "users", force: :cascade do |t|

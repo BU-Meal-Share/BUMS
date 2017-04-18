@@ -7,9 +7,6 @@
     Date:
     = @event.date.strftime("%d-%b-%Y")
   %li
-    Tags:
-    = @event.tags
-  %li
     Ingredients:
     = @event.ingredients
   %li
@@ -29,10 +26,16 @@
     = @event.recipes
   %li
     =image_tag @event.image
-  
-  -#%li
-  -#  Image:
-  -#  = @event.image
+  %li
+    Ethnicity:
+    = @event.ethnicity
+  %li
+    Dietary Restrictions:
+    = @event.dietary_restrictions
+  %li
+    Category:
+    = @event.category
+    
   
 
 %h3 Description:

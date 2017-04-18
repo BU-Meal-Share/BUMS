@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Event.create!(name: 'Meat festival', date: '22-Nov-2017', description: 'lots of meat', ingredients: 'meat')
 
-events = [{:name => 'Who Wants Some Grub?', :date => '25-Nov-1992'},
+events = [{:name => 'Who Wants Some Grub?', :date => '25-Nov-1992', :ethnicity => {"Asian" => "1"}, :dietary_restrictions => {"Gluten free" => "1"}, :category => {"Dinner" => "1"}},
     	  {:name => 'The Terminator', :date => '26-Oct-1984'},
     	  {:name => 'When Harry Met Sally', :date => '21-Jul-1989'},
       	  {:name => 'The Help', :date => '10-Aug-2011'},

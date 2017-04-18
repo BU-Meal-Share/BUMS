@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   
   def event_params
-    params.require(:event).permit(:name, :date, :description, :ingredients, :minPartySize, :curPartySize, :maxPartySize, :tags, :recipes, :location, :image)
+    params.require(:event).permit(:name, :date, :description, :ingredients, :minPartySize, :curPartySize, :maxPartySize, :recipes, :location, :image, :ethnicity, :dietary_restrictions, :category)
   end
   
   def show
@@ -42,22 +42,42 @@ class EventsController < ApplicationController
   end
 
   def new
+    @ethnicity_options = Event.ethnicity_options
+    @dietary_restrictions_options = Event.dietary_restrictions_options
+    @category_options = Event.category_options
   end
 
   def create
     @event = Event.create!(event_params)
+    #@event.ethnicity = event_params["ethnicity"].keys.to_s if event_params.has_key?("ethnicity")
+    #@event.dietary_restrictions = event_params["restrictions"].keys.to_s if event_params.has_key?("restrictions")
+    #@event.category = event_params["category"].keys.to_s if event_params.has_key?("category")
+    #@event.save!
+    
     flash[:notice] = "#{@event.name} was successfully created."
     redirect_to events_path
   end
 
   def edit
+    @ethnicity_options = Event.ethnicity_options
+    @dietary_restrictions_options = Event.dietary_restrictions_options
+    @category_options = Event.category_options
+
     id = params[:id]
     @event = Event.find(id)
+    @ethnicities = @event.ethnicity.keys
+    @dietary_restrictions = @event.dietary_restrictions.keys
+    @categories = @event.category.keys
   end
 
   def update
     @event = Event.find params[:id]
     @event.update_attributes!(event_params)
+    #@event.ethnicity = event_params["ethnicity"].keys.to_s if event_params.has_key?("ethnicity")
+    #@event.dietary_restrictions = event_params["restrictions"].keys.to_s if event_params.has_key?("restrictions")
+    #@event.category = event_params["category"].keys.to_s if event_params.has_key?("category")
+    #@event.save!
+    
     flash[:notice] = "#{@event.name} was successfully updated."
     redirect_to events_path
   end

@@ -21,14 +21,17 @@
     %tr
       %th Event Title
       %th Date
-      %th More Info
-      %th Tags
+      %th Ethnicity
+      %th Dietary Restrictions
+      %th Category
   %tbody
     - @events.each do |event|
       %tr
         %td= link_to "#{event.name}", event_path(event)
         %td= event.date
-        %td= event.tags
+        %td= event.ethnicity
+        %td= event.dietary_restrictions
+        %td= event.category
         
     = link_to 'Create new event', new_event_path 
 
