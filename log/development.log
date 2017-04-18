@@ -3607,3 +3607,54 @@ Started GET "/auth/google_oauth2" for 173.68.143.29 at 2017-04-15 20:10:59 +0000
 
 Started GET "/auth/google_oauth2" for 173.68.143.29 at 2017-04-15 20:10:59 +0000
 (google_oauth2) Request phase initiated.
+
+
+Started GET "/" for 50.58.104.38 at 2017-04-18 15:31:40 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered events/index.html.haml within layouts/application (19.0ms)
+Completed 200 OK in 335ms (Views: 308.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.38 at 2017-04-18 15:31:44 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2" for 50.58.104.38 at 2017-04-18 15:31:44 +0000
+(google_oauth2) Request phase initiated.
+
+
+Started GET "/auth/google_oauth2/callback?state=ed402affbed666eafff919453305459aca22755da1b6b829&code=4/mHNNkfUYbpQvaKO0FpERSRqKUhsUwnGtBUmkpU6vTLU" for 50.58.104.38 at 2017-04-18 15:31:49 +0000
+(google_oauth2) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"ed402affbed666eafff919453305459aca22755da1b6b829", "code"=>"4/mHNNkfUYbpQvaKO0FpERSRqKUhsUwnGtBUmkpU6vTLU", "provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1  [["uid", "104961175330884005910"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("provider", "uid", "name", "oauth_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["provider", "google_oauth2"], ["uid", "104961175330884005910"], ["name", "Shafkat Haque"], ["oauth_token", "ya29.GlwxBP_Z9JEBbKPGuMDYz0GsesB2qMyQqdeaSdIiZWnLiMQ4Nw3uQ70-RpjV022QZDgxFlz0tTlVK7e_xRa8tcRQsRjuNUC7n_PjCmddJTeVOVk-DKl9DqDFzftHNg"], ["created_at", "2017-04-18 15:31:50.064935"], ["updated_at", "2017-04-18 15:31:50.064935"]]
+  [1m[36m (12.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://rottenpotatoes-shaque20.c9users.io/events
+Completed 302 Found in 39ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/events" for 50.58.104.38 at 2017-04-18 15:31:50 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered events/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/signout" for 50.58.104.38 at 2017-04-18 15:32:24 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to https://rottenpotatoes-shaque20.c9users.io/events
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 50.58.104.38 at 2017-04-18 15:32:24 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered events/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.5ms)

@@ -1,27 +1,24 @@
-Feature: third party authentication with google
-
-As a user,
-So that my activities are recorded,
-I want to be able to login through a third party.
+Feature: user login
+  
+    As a user,
+    so that I can easily login,
+    I want to be able to login through Google
 
 Background:
+
   Given I am on the BUMS home page
- 
-Scenario: View Login Page
-  When I follow "Sign in with Google"
-  Then I should see "Username:"
-  And I should see "Password:"
+  
+@omniauth_test
+Scenario: a user can log into google
+  Given I am signed in with google
+  Then I should see "googleuser"
 
-Scenario: Successful Login
-  When I follow "Login"
-  And I fill in the following:
-    |Username | tmodell |
-    |Password  | helloworld |
-  Then I should see "Welcome tmodell"
+@omniauth_test
+Scenario: a user logs out
+  Given I am signed in with google
+  And I should see "googleuser"
+  And I follow "Sign out"
+  Then I should see "Sign in with Google"
+  
 
-Scenario: Unsuccessful Login
-  When I follow "Login"
-  And I fill in the following:
-    |Username | tmodell |
-    |Password  | fail |
-  Then I should see "Login Unsuccessful"
+  
