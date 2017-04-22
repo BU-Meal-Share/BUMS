@@ -41,6 +41,6 @@ gem 'haml'
 gem 'turbolinks'
 # Use unicorn as the web server
 # gem 'unicorn'
-
+gem "omniauth-google-oauth2", "~> 0.2.1"
 # Deploy with Capistrano
 # gem 'capistrano'

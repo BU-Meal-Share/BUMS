@@ -41,6 +41,10 @@ When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
   with_scope(parent) { When "#{step}:", table_or_string }
 end
 
+Given /^I am signed in with google$/ do
+  visit "/auth/google_oauth2"
+end
+
 Given /^(?:|I )am on (.+)$/ do |page_name|
   p page_name
   visit path_to(page_name)
