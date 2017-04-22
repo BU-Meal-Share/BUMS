@@ -1,32 +1,24 @@
-Feature: Users should exist
+Feature: user login
   
-As a user,
-So that my activities are recorded,
-I want to be able to login.
+    As a user,
+    so that I can easily login,
+    I want to be able to login through Google
 
 Background:
+
   Given I am on the BUMS home page
-  And the following users exist: 
-    | name | password |
-    | tmodell | helloworld |
- 
-Scenario: View Login Page
-  When I follow "Login"
-  Then I should see "Username:"
-  And I should see "Password:"
+  
+@omniauth_test
+Scenario: a user can log into google
+  Given I am signed in with google
+  Then I should see "googleuser"
 
-# Scenario: Successful Login
-#   When I follow "Login"
-#   And I fill in the following:
-#     |Username | tmodell |
-#     |Password  | helloworld |
-#   Then I press "Login" 
-#   And I should see "Welcome tmodell"
+@omniauth_test
+Scenario: a user logs out
+  Given I am signed in with google
+  And I should see "googleuser"
+  And I follow "Sign out"
+  Then I should see "Sign in with Google"
+  
 
-# Scenario: Unsuccessful Login
-#   When I follow "Login"
-#   And I fill in the following:
-#     |Username | tmodell |
-#     |Password  | fail |
-#   Then I press "Login" 
-#   Then I should see "Login Unsuccessful"
+  
