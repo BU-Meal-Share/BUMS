@@ -1,5 +1,5 @@
 class AttendeesController < ApplicationController
-  before_filter :has_user_and_event, :only => [:new, :create]
+  before_filter :has_user_and_event, :only => [:new, :create, :destroy]
   protected
   def has_user_and_event
     @current_user = User.find_by_id(session[:user_id])
@@ -14,8 +14,8 @@ class AttendeesController < ApplicationController
     end
   end
   def new
-      @attendee = @event.attendees.build
-      redirect_to event_attendees_path
+#      @attendee = @event.attendees.build
+#      redirect_to event_attendees_path
   end
   public
   def create
@@ -26,6 +26,13 @@ class AttendeesController < ApplicationController
     # @current_user.attendees << @event.attendees.build(params[:attendee])
     #attendee.user = @current_user
     @attendee = Attendee.create!(:user_id => @current_user.id, :event_id => params[:event_id])
+    @event = Event.find_by_id(params[:event_id])
+    redirect_to event_path(@event)
+  end
+  def destroy
+    @attendee = Attendee.find(params[:id])
+    @attendee.destroy
+#    attendees.find_by(event_id: params[:event_id], user_id: params[:id]).destroy
     @event = Event.find_by_id(params[:event_id])
     redirect_to event_path(@event)
   end
