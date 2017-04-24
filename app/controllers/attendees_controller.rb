@@ -1,5 +1,5 @@
 class AttendeesController < ApplicationController
-  before_filter :has_user_and_event, :only => [:new, :create, :destroy]
+  before_filter :has_user_and_event, :only => [:create, :destroy]
   protected
   def has_user_and_event
     @current_user = User.find_by_id(session[:user_id])
@@ -12,10 +12,6 @@ class AttendeesController < ApplicationController
       flash[:warning] = 'Attending must be for an existing event.'
       redirect_to events_path
     end
-  end
-  def new
-#      @attendee = @event.attendees.build
-#      redirect_to event_attendees_path
   end
   public
   def create

@@ -1,9 +1,15 @@
 user_tmodell:
     id: 1
-    name: tmodell
-    password: helloworld
+    provider: google
+    uid: tmodell
+    name: Tom Modell
+    oauth_token: token
+    oauth_expires_at: 2017-04-02 17:44:12
     
 user_jcipoll:
     id: 2
-    name: jcipoll
-    password: goodbyeworld
+    provider: google
+    uid: jcipoll1
+    name: Joe Cipollina
+    oauth_token: token
+    oauth_expires_at: 2017-04-02 17:44:12
