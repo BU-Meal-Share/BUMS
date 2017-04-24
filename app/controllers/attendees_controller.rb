@@ -13,6 +13,12 @@ class AttendeesController < ApplicationController
       redirect_to events_path
     end
   end
+  
+  private
+  def event_params
+    params.require(:event).permit(:name, :date, :description, :ingredients, :minPartySize, :curPartySize, :maxPartySize, :tags, :recipes, :location, :image, :user_id)
+  end
+  
   public
   def create
     # since user_id is a protected attribute that won't get
