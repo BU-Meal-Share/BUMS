@@ -70,6 +70,7 @@ Before('@omniauth_test') do
         :expires_at => DateTime.now,
     }
   })
+
 end
 
 After('@omniauth_test') do

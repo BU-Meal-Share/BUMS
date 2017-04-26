@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :events
   def self.from_omniauth(auth)
     user = User.find_by(uid: auth[:uid]) || User.new
     user.attributes = {
@@ -13,18 +14,3 @@ class User < ActiveRecord::Base
   end
 end
 
-=begin
-class SessionsController < ApplicationController
-  def create
-    @user = User.find_or_create_from_auth_hash(auth_hash)
-    self.current_user = @user
-    redirect_to '/'
-  end
-
-  protected
-
-  def auth_hash
-    request.env['omniauth.auth']
-  end
-end
-=end

@@ -172,5 +172,41 @@ describe EventsController do
         expect(response).to redirect_to(events_path)
       end
     end
+    
+    describe "#require_permission" do
+      fixtures :events
+      before :each do
+        @event = events(:vegan_potluck)
+      end
+       
+      auth = {
+        provider: "google",
+        uid: "12345678910",
+        info: {
+          name: "Jesse",
+        },
+        credentials: {
+          token: "abcdefg12345",
+          expires_at: DateTime.now
+        }
+      }
+      User.from_omniauth(auth)
+      it "redirects to the index page" do
+        allow(Event).to receive(:find).with(@event.id.to_s).and_return(@event)
+        
+        #session[:user_id] = 2 
+        expect(@event).to receive(:destroy)
+        #allow(Event).to receive(:require_permission)
+        #get :require_permission
+        get :destroy,  {:id => @event.id}
+        #allow(Event).to receive(:require_permission)
+       
+        
+      end
+    
+      #it "does not redirect to the index page" do
+        
+      #end
+  end
 end 
 

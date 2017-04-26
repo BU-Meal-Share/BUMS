@@ -1,8 +1,22 @@
 class EventsController < ApplicationController
+  before_action :require_permission, only: [:destroy]
   
   def event_params
     params.require(:event).permit(:name, :date, :description, :ingredients, :minPartySize, :curPartySize, :maxPartySize, :tags, :recipes, :location, :image, :user_id)
   end
+  
+  def require_permission
+    p current_user
+    if current_user.nil? or current_user.id != Event.find(params[:id]).user_id
+      redirect_to events_path
+    end
+  end
+  
+  def isOwner
+    p current_user
+    return true if !current_user.nil? and current_user.id == Event.find(params[:id]).user_id
+  end
+  helper_method :isOwner
   
   def show
     id = params[:id]
