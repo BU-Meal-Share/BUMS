@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   
   def event_params
-    params.require(:event).permit(:name, :date, :description, :ingredients, :minPartySize, :curPartySize, :maxPartySize, :recipes, :location, :image, :ethnicity, :dietary_restrictions, :category)
+    params.require(:event).permit(:name, :date, :description, :ingredients, :minPartySize, :curPartySize, :maxPartySize, :recipes, :location, :image, ethnicity: [:African, :American, :Asian, :French, :Indian, :Italian, :Latin_American, :Mediterranean, :Middle_Eastern, :Spanish, :NA], dietary_restrictions: [:Gluten_Free, :Nut_Free , :Vegetarian, :Vegan,  :Paleo, :Keto, :Kosher, :NA] , category: [:Potluck, :Restaurant, :Breakfast, :Brunch, :Lunch, :Dinner, :All_day, :Other])
   end
   
   def show
@@ -49,10 +49,6 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.create!(event_params)
-    #@event.ethnicity = event_params["ethnicity"].keys.to_s if event_params.has_key?("ethnicity")
-    #@event.dietary_restrictions = event_params["restrictions"].keys.to_s if event_params.has_key?("restrictions")
-    #@event.category = event_params["category"].keys.to_s if event_params.has_key?("category")
-    #@event.save!
     
     flash[:notice] = "#{@event.name} was successfully created."
     redirect_to events_path
@@ -72,11 +68,8 @@ class EventsController < ApplicationController
 
   def update
     @event = Event.find params[:id]
+    
     @event.update_attributes!(event_params)
-    #@event.ethnicity = event_params["ethnicity"].keys.to_s if event_params.has_key?("ethnicity")
-    #@event.dietary_restrictions = event_params["restrictions"].keys.to_s if event_params.has_key?("restrictions")
-    #@event.category = event_params["category"].keys.to_s if event_params.has_key?("category")
-    #@event.save!
     
     flash[:notice] = "#{@event.name} was successfully updated."
     redirect_to events_path

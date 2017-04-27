@@ -35650,3 +35650,597 @@ Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Processing by EventsController#create as HTML
+  Parameters: {"event"=>{"name"=>"test event"}}
+Redirected to http://test.host/events
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by EventsController#create as HTML
+  Parameters: {"event"=>{"name"=>"test event"}}
+Redirected to http://test.host/events
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by EventsController#create as HTML
+  Parameters: {"event"=>{"name"=>"test event"}}
+Redirected to http://test.host/events
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "events"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "events" ("id", "name", "date", "description", "ingredients") VALUES (1, 'Vegan Potluck!', '2017-11-25', 'Hi I love Vegan Food!', 'lettuce, onion, tomato, soy')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "events" ("id", "name", "date", "description", "ingredients") VALUES (2, 'Meat your maker', '2017-10-20', 'Jordans birthday dinner!', 'saussage, steak, chicken mofongo')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "events" ("id", "name", "date", "description", "ingredients") VALUES (3, 'Mexican marathon', '2017-05-05', 'Taco Tuesday, but not on a Tuesday...', 'tacos, burritos, chimichangas')
+  [1m[36m (17.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+Processing by EventsController#index as HTML
+  Rendered events/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+Processing by EventsController#index as HTML
+  Rendered events/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+Processing by EventsController#index as HTML
+  Parameters: {"start"=>"5-Jan-2017", "end"=>"31-Oct-2017"}
+  Rendered events/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+Processing by EventsController#index as HTML
+  Parameters: {"start"=>"5-Jan-2017", "end"=>"31-Oct-2017"}
+  Rendered events/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+Processing by EventsController#index as HTML
+  Parameters: {"sort"=>{"name"=>"1"}}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."name" ASC
+  Rendered events/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+Processing by EventsController#index as HTML
+  Parameters: {"sort"=>{"date"=>"1"}}
+  [1m[35mEvent Load (1.5ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 1.5ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered events/show.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (1.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/edit.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "events" WHERE "events"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/events
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/events
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/events
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/events
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("id", "name", "password") VALUES (1, 'tmodell', 'helloworld')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("id", "name", "password") VALUES (2, 'jcipoll', 'goodbyeworld')[0m
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (1.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:03 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (15.3ms)
+Completed 200 OK in 529ms (Views: 515.3ms | ActiveRecord: 0.5ms)
+Started GET "/events/new" for 127.0.0.1 at 2017-04-26 22:37:04 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (108.0ms)
+  Rendered events/new.html.haml within layouts/application (118.7ms)
+Completed 200 OK in 129ms (Views: 127.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/events/new" for 127.0.0.1 at 2017-04-26 22:37:04 +0000
+Processing by EventsController#new as HTML
+  Rendered events/_event_partial.html.haml (8.0ms)
+  Rendered events/new.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+Started POST "/events" for 127.0.0.1 at 2017-04-26 22:37:04 +0000
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "event"=>{"name"=>"Test Event Title", "date(1i)"=>"2017", "date(2i)"=>"11", "date(3i)"=>"1", "description"=>"Test Event description", "ingredients"=>"Test, text, of, ingredients"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "events" ("name", "description", "ingredients", "date") VALUES (?, ?, ?, ?)[0m  [["name", "Test Event Title"], ["description", "Test Event description"], ["ingredients", "Test, text, of, ingredients"], ["date", "2017-11-01 00:00:00.000000"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/events
+Completed 302 Found in 17ms (ActiveRecord: 1.5ms)
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:04 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Who Wants Some Grub?"], ["date", "2017-11-25 00:00:00.000000"], ["description", "foo"], ["ingredients", "ants, grubs"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Food Co-op: Wednesday Lunch"], ["date", "2017-10-26 00:00:00.000000"], ["description", "foo"], ["ingredients", "piza, pasta"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Vegans ONLY!"], ["date", "2017-07-21 00:00:00.000000"], ["description", "foo"], ["ingredients", "tofu, squash"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Dinner on Main St"], ["date", "2017-08-10 00:00:00.000000"], ["description", "foo"], ["ingredients", "n/a"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:04 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.3ms)
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."name" = ? LIMIT 1[0m  [["name", "Vegans ONLY!"]]
+Started GET "/events/6" for 127.0.0.1 at 2017-04-26 22:37:04 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered events/show.html.haml within layouts/application (28.8ms)
+Completed 200 OK in 40ms (Views: 35.6ms | ActiveRecord: 0.4ms)
+Started DELETE "/events/6" for 127.0.0.1 at 2017-04-26 22:37:04 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/events
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:04 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (1.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Who Wants Some Grub?"], ["date", "2017-11-25 00:00:00.000000"], ["description", "foo"], ["ingredients", "ants, grubs"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Food Co-op: Wednesday Lunch"], ["date", "2017-10-26 00:00:00.000000"], ["description", "foo"], ["ingredients", "piza, pasta"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Vegans ONLY!"], ["date", "2017-07-21 00:00:00.000000"], ["description", "foo"], ["ingredients", "tofu, squash"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Dinner on Main St"], ["date", "2017-08-10 00:00:00.000000"], ["description", "foo"], ["ingredients", "n/a"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:04 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.4ms)
+Started GET "/events/4" for 127.0.0.1 at 2017-04-26 22:37:04 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered events/show.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+Started GET "/events/4/edit" for 127.0.0.1 at 2017-04-26 22:37:04 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered events/_event_partial.html.haml (6.9ms)
+  Rendered events/edit.html.haml within layouts/application (10.9ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+Started PUT "/events/4" for 127.0.0.1 at 2017-04-26 22:37:04 +0000
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "event"=>{"name"=>"testing", "date(1i)"=>"2017", "date(2i)"=>"11", "date(3i)"=>"25", "description"=>"foo", "ingredients"=>"ants, grubs"}, "commit"=>"Save", "id"=>"4"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "events" SET "name" = ? WHERE "events"."id" = ?[0m  [["name", "testing"], ["id", 4]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/events
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:04 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Who Wants Some Grub?"], ["date", "2017-11-25 00:00:00.000000"], ["description", "foo"], ["ingredients", "ants, grubs"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Food Co-op: Wednesday Lunch"], ["date", "2017-10-26 00:00:00.000000"], ["description", "foo"], ["ingredients", "piza, pasta"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Vegans ONLY!"], ["date", "2017-07-21 00:00:00.000000"], ["description", "foo"], ["ingredients", "tofu, squash"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Dinner on Main St"], ["date", "2017-08-10 00:00:00.000000"], ["description", "foo"], ["ingredients", "n/a"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+Started GET "/events/4" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered events/show.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+Started GET "/events/4/edit" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered events/_event_partial.html.haml (6.2ms)
+  Rendered events/edit.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+Started GET "/events/4" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered events/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."name" = ? LIMIT 1  [["name", "Who Wants Some Grub?"]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Who Wants Some Grub?"], ["date", "2017-11-25 00:00:00.000000"], ["description", "foo"], ["ingredients", "bar"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Food Co-op: Wednesday Lunch"], ["date", "2017-10-26 00:00:00.000000"], ["description", "foo"], ["ingredients", "bar"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Vegans ONLY!"], ["date", "2017-07-21 00:00:00.000000"], ["description", "foo"], ["ingredients", "bar"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Dinner on Main St"], ["date", "2017-08-10 00:00:00.000000"], ["description", "foo"], ["ingredients", "bar"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.4ms)
+Started GET "/events?utf8=%E2%9C%93&start=15-Sep-2017&end=10-Dec-2017&commit=Filter" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"15-Sep-2017", "end"=>"10-Dec-2017", "commit"=>"Filter"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE ("events"."date" BETWEEN '2017-09-15 00:00:00.000000' AND '2017-12-10 00:00:00.000000')  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Who Wants Some Grub?"], ["date", "2017-11-25 00:00:00.000000"], ["description", "not the bootloader"], ["ingredients", "grubs"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.6ms)
+Started GET "/events?utf8=%E2%9C%93&start=25-Nov-2015&end=25-Nov-2019&commit=Filter" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"25-Nov-2015", "end"=>"25-Nov-2019", "commit"=>"Filter"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE ("events"."date" BETWEEN '2015-11-25 00:00:00.000000' AND '2019-11-25 00:00:00.000000')  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.4ms)
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE ("events"."date" BETWEEN '2015-11-25 00:00:00.000000' AND '2019-11-25 00:00:00.000000')  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Who Wants Some Grub?"], ["date", "2017-11-25 00:00:00.000000"], ["description", "not the bootloader"], ["ingredients", "grubs"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.4ms)
+Started GET "/events?utf8=%E2%9C%93&start=25-Nov-2015&end=25-Nov-2019&commit=Filter" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  Parameters: {"utf8"=>"✓", "start"=>"25-Nov-2015", "end"=>"25-Nov-2019", "commit"=>"Filter"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE ("events"."date" BETWEEN '2015-11-25 00:00:00.000000' AND '2019-11-25 00:00:00.000000')  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.4ms)
+Started GET "/events/4" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered events/show.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE ("events"."date" BETWEEN '2015-11-25 00:00:00.000000' AND '2019-11-25 00:00:00.000000')  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (22.0ms)
+Completed 200 OK in 37ms (Views: 25.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Who Wants Some Grub?"], ["date", "2017-11-25 00:00:00.000000"], ["description", "not the bootloader"], ["ingredients", "grubs"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.4ms)
+Started GET "/events?utf8=%E2%9C%93&sort[name]=1&sort[date]=1&commit=Sort" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  Parameters: {"utf8"=>"✓", "sort"=>{"name"=>"1", "date"=>"1"}, "commit"=>"Sort"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."name" ASC, "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.4ms)
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."name" ASC, "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Who Wants Some Grub?"], ["date", "2017-11-25 00:00:00.000000"], ["description", "not the bootloader"], ["ingredients", "grubs"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.8ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 15ms (Views: 7.6ms | ActiveRecord: 1.8ms)
+Started GET "/events?utf8=%E2%9C%93&sort[name]=1&sort[date]=1&commit=Sort" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  Parameters: {"utf8"=>"✓", "sort"=>{"name"=>"1", "date"=>"1"}, "commit"=>"Sort"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."name" ASC, "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+Started GET "/events/4" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered events/show.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."name" ASC, "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (6.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Who Wants Some Grub?"], ["date", "2017-11-25 00:00:00.000000"], ["description", "foo"], ["ingredients", "bar"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Food Co-op: Wednesday Lunch"], ["date", "2017-10-26 00:00:00.000000"], ["description", "foo"], ["ingredients", "bar"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Vegans ONLY!"], ["date", "2017-07-21 00:00:00.000000"], ["description", "foo"], ["ingredients", "bar"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Dinner on Main St"], ["date", "2017-08-10 00:00:00.000000"], ["description", "foo"], ["ingredients", "bar"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:05 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 17ms (Views: 7.7ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Who Wants Some Grub?"], ["date", "2017-11-25 00:00:00.000000"], ["description", "foo"], ["ingredients", "ants, grubs"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Food Co-op: Wednesday Lunch"], ["date", "2017-10-26 00:00:00.000000"], ["description", "foo"], ["ingredients", "piza, pasta"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Vegans ONLY!"], ["date", "2017-07-21 00:00:00.000000"], ["description", "foo"], ["ingredients", "tofu, squash"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Dinner on Main St"], ["date", "2017-08-10 00:00:00.000000"], ["description", "foo"], ["ingredients", "n/a"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:06 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (12.9ms)
+Completed 200 OK in 20ms (Views: 15.8ms | ActiveRecord: 0.4ms)
+Started GET "/events?utf8=%E2%9C%93&sort[name]=1&sort[date]=1&commit=Sort" for 127.0.0.1 at 2017-04-26 22:37:06 +0000
+Processing by EventsController#index as HTML
+  Parameters: {"utf8"=>"✓", "sort"=>{"name"=>"1", "date"=>"1"}, "commit"=>"Sort"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."name" ASC, "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (3.4ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Who Wants Some Grub?"], ["date", "2017-11-25 00:00:00.000000"], ["description", "foo"], ["ingredients", "ants, grubs"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Food Co-op: Wednesday Lunch"], ["date", "2017-10-26 00:00:00.000000"], ["description", "foo"], ["ingredients", "piza, pasta"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)[0m  [["name", "Vegans ONLY!"], ["date", "2017-07-21 00:00:00.000000"], ["description", "foo"], ["ingredients", "tofu, squash"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients") VALUES (?, ?, ?, ?)  [["name", "Dinner on Main St"], ["date", "2017-08-10 00:00:00.000000"], ["description", "foo"], ["ingredients", "n/a"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:06 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (13.8ms)
+Completed 200 OK in 24ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+Started GET "/events?utf8=%E2%9C%93&sort[date]=1&commit=Sort" for 127.0.0.1 at 2017-04-26 22:37:06 +0000
+Processing by EventsController#index as HTML
+  Parameters: {"utf8"=>"✓", "sort"=>{"date"=>"1"}, "commit"=>"Sort"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (3.9ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/events" for 127.0.0.1 at 2017-04-26 22:37:06 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "password") VALUES (?, ?)  [["name", "tmodell"], ["password", "helloworld"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/login" for 127.0.0.1 at 2017-04-26 22:37:06 +0000
+Processing by UsersController#login as HTML
+  Rendered users/login.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
