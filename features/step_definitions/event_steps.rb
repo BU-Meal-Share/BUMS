@@ -1,11 +1,21 @@
+require 'json'
+
 Given /the following events exist/ do |table|                                                                     
   table.hashes.each do |element|
     # each returned element will be a hash whose key is the table header.
     # you should arrange to add that movie to the database here.
+    element["ethnicity"] = JSON.parse(element["ethnicity"]) if element.has_key? "ethnicity"
+    element["dietary_restrictions"] = JSON.parse(element["dietary_restrictions"]) if element.has_key? "dietary_restrictions"
+    element["category"] = JSON.parse(element["category"]) if element.has_key? "category"
     Event.create!(element)
   end                                       
-end            
+end  
 
+Given /these events exist/ do |events|                                                             
+  events.each do |element|
+    Event.create!(element)
+  end                                       
+end  
 
 #Then(/^the director of "([^"]*)" should be "([^"]*)"$/) do |title, director|   
 #  expect(Movie.find_by_title(title).director).to eq director 
