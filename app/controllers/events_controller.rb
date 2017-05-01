@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   
   def event_params
-    params.require(:event).permit(:name, :date, :description, :ingredients, :minPartySize, :curPartySize, :maxPartySize, :tags, :recipes, :location, :image, :user_id)
+    params.require(:event).permit(:name, :date, :description, :ingredients, :minPartySize, :curPartySize, :maxPartySize, :recipes, :location, :image, :user_id, ethnicity: [:African, :American, :Asian, :French, :Indian, :Italian, :Latin_american, :Mediterranean, :Middle_eastern, :Spanish, :NA], dietary_restrictions: [:Gluten_free, :Nut_free , :Vegetarian, :Vegan,  :Paleo, :Keto, :Kosher, :NA] , category: [:Potluck, :Restaurant, :Breakfast, :Brunch, :Lunch, :Dinner, :All_day, :Other])
   end
   
   def show
@@ -42,22 +42,35 @@ class EventsController < ApplicationController
   end
 
   def new
+    @ethnicity_options = Event.ethnicity_options
+    @dietary_restrictions_options = Event.dietary_restrictions_options
+    @category_options = Event.category_options
   end
 
   def create
     @event = Event.create!(event_params)
+    
     flash[:notice] = "#{@event.name} was successfully created."
     redirect_to events_path
   end
 
   def edit
+    @ethnicity_options = Event.ethnicity_options
+    @dietary_restrictions_options = Event.dietary_restrictions_options
+    @category_options = Event.category_options
+
     id = params[:id]
     @event = Event.find(id)
+    @ethnicities = @event.ethnicity.keys
+    @dietary_restrictions = @event.dietary_restrictions.keys
+    @categories = @event.category.keys
   end
 
   def update
     @event = Event.find params[:id]
+    
     @event.update_attributes!(event_params)
+    
     flash[:notice] = "#{@event.name} was successfully updated."
     redirect_to events_path
   end

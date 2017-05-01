@@ -6,14 +6,12 @@ Feature: show an event
 
 Background: events have been added to the database
 
-
-
-  Given the following events exist:
-  | name                         | date         | description | ingredients  | minPartySize | curPartySize | maxPartySize | tags | location | recipes        | image  |
-  | Who Wants Some Grub?         | 25-Nov-2017  | foo         | ants, grubs  | 1            | 3            | 6            | ants | my house | ants with lime | 42.jpg |
-  | Food Co-op: Wednesday Lunch  | 26-Oct-2017  | foo         | piza, pasta  | 1            | 2            | 3            | n/a  | n/a      | n/a            | 2.jpg  |
-  | Vegans ONLY!                 | 21-Jul-2017  | foo         | tofu, squash | 1            | 2            | 3            | n/a  | n/a      | n/a            | 3.jpg  |
-  | Dinner on Main St            | 10-Aug-2017  | foo         | n/a          | 1            | 2            | 3            | n/a  | n/a      | n/a            | 4.jpg  |
+    Given the following events exist:
+    | name                         | date         | description | ingredients  | minPartySize | curPartySize | maxPartySize | location | recipes        | image  | ethnicity          | dietary_restrictions | category            |
+    | Who Wants Some Grub?         | 25-Nov-2017  | foo         | ants, grubs  | 1            | 3            | 6            | my house | ants with lime | 42.jpg | {"asian":"1"}     | {"kosher" : "1"}      | {"cafe":"1"}       | 
+    | Food Co-op: Wednesday Lunch  | 26-Oct-2017  | foo         | piza, pasta  | 1            | 2            | 3            | n/a      | n/a            | 2.jpg  | {"indian":"1"}    | {"other":"1"}       | {"restaurant":"1"} |
+    | Vegans ONLY!                 | 21-Jul-2017  | foo         | tofu, squash | 1            | 2            | 3            | n/a      | n/a            | 3.jpg  | {"african":"1"}   | {"vegan":"1"}       | {"potluck":"1"}    |
+    | Dinner on Main St            | 10-Aug-2017  | foo         | n/a          | 1            | 2            | 3            | n/a      | n/a            | 4.jpg  | {"french":"1"}    | {"keto":"1"}        | {"dinner":"1"}     |  
 
   And  I am on the BUMS home page
   
@@ -39,7 +37,10 @@ Scenario: Viewing an Event with additional info
   And I should see "MinPartySize: 1"
   And I should see "CurrentPartySize: 3"
   And I should see "MaxPartySize: 6"
-  And I should see "Tags: ants"
   And I should see "Location: my house"
   And I should see "Recipe: ants with lime"
   And I should see the image "42.jpg"
+  And I should see "asian"
+  And I should see "kosher"
+  And I should see "cafe"
+

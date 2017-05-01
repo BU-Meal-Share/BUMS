@@ -24,7 +24,7 @@
 = form_tag events_path, :method => :get, :id => "sort_form" do
   Include:
   - @sort_options.each do |option|
-    = option
+    -#    = option
     = check_box_tag "sort[#{option}]", 1, @sort.include?(option), :id => "option_#{option}"
   = submit_tag 'Sort', :id => "options_submit"
 
@@ -33,14 +33,17 @@
     %tr
       %th Event Title
       %th Date
-      %th More Info
-      %th Tags
+      %th Ethnicity
+      %th Dietary Restrictions
+      %th Category
   %tbody
     - @events.each do |event|
       %tr
         %td= link_to "#{event.name}", event_path(event)
         %td= event.date
-        %td= event.tags
+        %td= event.ethnicity
+        %td= event.dietary_restrictions
+        %td= event.category
         
     = link_to 'Create new event', new_event_path 
 
