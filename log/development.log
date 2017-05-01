@@ -4091,3 +4091,502 @@ Processing by EventsController#index as HTML
   [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
   Rendered events/index.html.haml within layouts/application (6.0ms)
 Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 128.226.119.250 at 2017-04-27 15:05:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 303ms (Views: 276.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/1" for 128.226.119.250 at 2017-04-27 15:05:48 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 37ms (Views: 23.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/1/edit" for 128.226.119.250 at 2017-04-27 15:05:50 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/_event_partial.html.haml (16.8ms)
+  Rendered events/edit.html.haml within layouts/application (24.1ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/events/1" for 128.226.119.250 at 2017-04-27 15:05:57 +0000
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VHirkm1exqvciu2DnDoDw/92osGYdl19du6v3E0WPnoAKbJKKXhSC19VvCLM2xGcwCsgyjkwYsn0/e0R+y4Tsw==", "event"=>{"name"=>"Who Wants Some Grub?", "date(1i)"=>"1992", "date(2i)"=>"11", "date(3i)"=>"25", "description"=>"", "ingredients"=>"", "dietary_restrictions"=>{"Paleo"=>"1"}}, "commit"=>"Save", "id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "events" SET "dietary_restrictions" = ? WHERE "events"."id" = ?[0m  [["dietary_restrictions", "--- !ruby/hash-with-ivars:ActionController::Parameters\nelements:\n  Paleo: '1'\nivars:\n  :@permitted: true\n"], ["id", 1]]
+  [1m[35m (10.7ms)[0m  commit transaction
+Redirected to https://cs445-workspace-jordar.c9users.io/events
+Completed 302 Found in 27ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/events" for 128.226.119.250 at 2017-04-27 15:05:57 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/1" for 128.226.119.250 at 2017-04-27 15:06:04 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/show.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 36ms (Views: 28.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/1/edit" for 128.226.119.250 at 2017-04-27 15:06:07 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/_event_partial.html.haml (50.7ms)
+  Rendered events/edit.html.haml within layouts/application (54.7ms)
+Completed 200 OK in 79ms (Views: 76.1ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/events/1" for 128.226.119.250 at 2017-04-27 15:06:47 +0000
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mj31i4wu64oOvRse7ssaTGlc0SMEkWDNr8THSBZbhvDObOxTyAh/Ko1iSr++KggTVgFTKKXXX3kt14WFoGOrOQ==", "event"=>{"name"=>"Who Wants Some Grub?", "date(1i)"=>"1992", "date(2i)"=>"11", "date(3i)"=>"25", "description"=>"", "ingredients"=>""}, "commit"=>"Save", "id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+Redirected to https://cs445-workspace-jordar.c9users.io/events
+Completed 302 Found in 10ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/events" for 128.226.119.250 at 2017-04-27 15:06:47 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/2" for 128.226.119.250 at 2017-04-27 15:06:52 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/show.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/2/edit" for 128.226.119.250 at 2017-04-27 15:06:54 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered events/_event_partial.html.haml (19.2ms)
+  Rendered events/edit.html.haml within layouts/application (207.9ms)
+Completed 200 OK in 237ms (Views: 234.8ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/events/2" for 128.226.119.250 at 2017-04-27 15:06:58 +0000
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U5jpSvKcSkG9OmNPO/79QzOiMy22/mth7/Ak9U9gm58HyfCStrre4T7lMu5rH+8cDP+xJhe4VNVt42Y4+Vi2Vg==", "event"=>{"name"=>"Meat festival", "date(1i)"=>"2017", "date(2i)"=>"11", "date(3i)"=>"22", "description"=>"lots of meat", "ingredients"=>"meat", "ethnicity"=>{"American"=>"1"}}, "commit"=>"Save", "id"=>"2"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  UPDATE "events" SET "ethnicity" = ? WHERE "events"."id" = ?  [["ethnicity", "--- !ruby/hash-with-ivars:ActionController::Parameters\nelements:\n  American: '1'\nivars:\n  :@permitted: true\n"], ["id", 2]]
+  [1m[36m (14.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://cs445-workspace-jordar.c9users.io/events
+Completed 302 Found in 28ms (ActiveRecord: 16.8ms)
+
+
+Started GET "/events" for 128.226.119.250 at 2017-04-27 15:06:58 +0000
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/2" for 128.226.119.250 at 2017-04-27 15:07:00 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered events/show.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/edit" for 128.226.119.250 at 2017-04-27 15:07:02 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/_event_partial.html.haml (11.2ms)
+  Rendered events/edit.html.haml within layouts/application (16.5ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/events/2" for 128.226.119.250 at 2017-04-27 15:07:06 +0000
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"en/YpBuSRPAkbP+fe/4Ct7+AYfGlao16LTn/o8eHuAAuLsF8X7TQUKezrj4rHxDogN3j+gQsss6vKr1ucb+VyQ==", "event"=>{"name"=>"Meat festival", "date(1i)"=>"2017", "date(2i)"=>"11", "date(3i)"=>"22", "description"=>"lots of meat", "ingredients"=>"meat", "ethnicity"=>{"Asian"=>"1"}}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "events" SET "ethnicity" = ? WHERE "events"."id" = ?[0m  [["ethnicity", "--- !ruby/hash-with-ivars:ActionController::Parameters\nelements:\n  Asian: '1'\nivars:\n  :@permitted: true\n"], ["id", 2]]
+  [1m[35m (10.6ms)[0m  commit transaction
+Redirected to https://cs445-workspace-jordar.c9users.io/events
+Completed 302 Found in 23ms (ActiveRecord: 11.2ms)
+
+
+Started GET "/events" for 128.226.119.250 at 2017-04-27 15:07:06 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/1" for 128.226.119.250 at 2017-04-27 15:08:36 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/show.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1/edit" for 128.226.119.250 at 2017-04-27 15:08:37 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/_event_partial.html.haml (13.7ms)
+  Rendered events/edit.html.haml within layouts/application (134.9ms)
+Completed 200 OK in 182ms (Views: 171.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/1/edit" for 128.226.119.250 at 2017-04-27 15:09:58 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/_event_partial.html.haml (2.8ms)
+  Rendered events/edit.html.haml within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 1.4ms)
+
+SyntaxError (/home/ubuntu/workspace/BUMS/app/views/events/_event_partial.html.haml:16: syntax error, unexpected keyword_false, expecting ')'
+...tion}]]", 1, @event.nil?  false : @event.ethnicity.keys.incl...
+...                               ^):
+  app/views/events/_event_partial.html.haml:16: syntax error, unexpected keyword_false, expecting ')'
+  app/views/events/edit.html.haml:5:in `block in _app_views_events_edit_html_haml___596857692106571247_70238156186440'
+  app/views/events/edit.html.haml:3:in `_app_views_events_edit_html_haml___596857692106571247_70238156186440'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.1ms)
+
+
+Started GET "/events/1/edit" for 128.226.119.250 at 2017-04-27 15:10:50 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/_event_partial.html.haml (36.8ms)
+  Rendered events/edit.html.haml within layouts/application (49.4ms)
+Completed 200 OK in 442ms (Views: 387.5ms | ActiveRecord: 1.3ms)
+
+
+Started PUT "/events/1" for 128.226.119.250 at 2017-04-27 15:10:56 +0000
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9PeoKnbus1GLfbTYANwEmMp4JQfDhDcXWHlmJvaj8MqgprHyMsgn8Qii5XlQPRbH9SWnDGLCCKPaaiTrQJvdAw==", "event"=>{"name"=>"Who Wants Some Grub?", "date(1i)"=>"1992", "date(2i)"=>"11", "date(3i)"=>"25", "description"=>"", "ingredients"=>"", "ethnicity"=>{"Italian"=>"1"}}, "commit"=>"Save", "id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "events" SET "ethnicity" = ? WHERE "events"."id" = ?[0m  [["ethnicity", "--- !ruby/hash-with-ivars:ActionController::Parameters\nelements:\n  Italian: '1'\nivars:\n  :@permitted: true\n"], ["id", 1]]
+  [1m[35m (17.7ms)[0m  commit transaction
+Redirected to https://cs445-workspace-jordar.c9users.io/events
+Completed 302 Found in 40ms (ActiveRecord: 18.8ms)
+
+
+Started GET "/events" for 128.226.119.250 at 2017-04-27 15:10:56 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/1" for 128.226.119.250 at 2017-04-27 15:10:58 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/show.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/edit" for 128.226.119.250 at 2017-04-27 15:11:00 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/_event_partial.html.haml (6.1ms)
+  Rendered events/edit.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1/edit" for 128.226.119.250 at 2017-04-27 15:11:43 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/_event_partial.html.haml (25.4ms)
+  Rendered events/edit.html.haml within layouts/application (39.9ms)
+Completed 200 OK in 418ms (Views: 364.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events/1/edit" for 128.226.119.250 at 2017-04-27 15:12:32 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/_event_partial.html.haml (16.8ms)
+  Rendered events/edit.html.haml within layouts/application (24.8ms)
+Completed 200 OK in 308ms (Views: 257.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events/1/edit" for 128.226.119.250 at 2017-04-27 15:13:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/_event_partial.html.haml (21.4ms)
+  Rendered events/edit.html.haml within layouts/application (30.6ms)
+Completed 200 OK in 299ms (Views: 259.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events/1/edit" for 128.226.119.250 at 2017-04-27 15:13:52 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/_event_partial.html.haml (26.3ms)
+  Rendered events/edit.html.haml within layouts/application (37.5ms)
+Completed 200 OK in 333ms (Views: 276.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/events/1/edit" for 128.226.119.250 at 2017-04-27 15:14:44 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/_event_partial.html.haml (7.3ms)
+  Rendered events/edit.html.haml within layouts/application (12.8ms)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 128.226.119.250 at 2017-04-27 15:15:41 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 267ms (Views: 229.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events/2" for 128.226.119.250 at 2017-04-27 15:15:45 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered events/show.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 34ms (Views: 22.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/2/edit" for 128.226.119.250 at 2017-04-27 15:15:47 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/_event_partial.html.haml (18.5ms)
+  Rendered events/edit.html.haml within layouts/application (25.5ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/events/2" for 128.226.119.250 at 2017-04-27 15:15:50 +0000
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZvDL5Sb0vBNcEvnsyzyQE8qN4VTOcPvXWKdPqoXgq9MyodI9YtIos9/NqE2b3YJM9dBjX282xGPatA1nM9iGGg==", "event"=>{"name"=>"Meat festival", "date(1i)"=>"2017", "date(2i)"=>"11", "date(3i)"=>"22", "description"=>"lots of meat", "ingredients"=>"meat", "category"=>{"Lunch"=>"1"}}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (3.9ms)[0m  [1mUPDATE "events" SET "category" = ? WHERE "events"."id" = ?[0m  [["category", "--- !ruby/hash-with-ivars:ActionController::Parameters\nelements:\n  Lunch: '1'\nivars:\n  :@permitted: true\n"], ["id", 2]]
+  [1m[35m (13.9ms)[0m  commit transaction
+Redirected to https://cs445-workspace-jordar.c9users.io/events
+Completed 302 Found in 146ms (ActiveRecord: 18.2ms)
+
+
+Started GET "/events" for 128.226.119.250 at 2017-04-27 15:15:51 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.5ms)
+  [1m[36m (15.3ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "date" datetime, "description" text, "ingredients" text, "minPartySize" integer, "curPartySize" integer, "maxPartySize" integer, "location" varchar, "recipes" text, "image" varchar, "ethnicity" varchar, "dietary_restrictions" varchar, "category" varchar) [0m
+  [1m[35m (11.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "password" text) 
+  [1m[36m (13.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (10.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170418004419')[0m
+  [1m[35m (10.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170325161030')
+  [1m[36m (8.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170306172253')[0m
+  [1m[35m (14.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170325142108')
+  [1m[36m (13.7ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "date" datetime, "description" text, "ingredients" text, "minPartySize" integer, "curPartySize" integer, "maxPartySize" integer, "location" varchar, "recipes" text, "image" varchar, "ethnicity" varchar, "dietary_restrictions" varchar, "category" varchar) [0m
+  [1m[35m (15.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "password" text) 
+  [1m[36m (18.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (10.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (16.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170418004419')[0m
+  [1m[35m (20.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170325161030')
+  [1m[36m (15.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170306172253')[0m
+  [1m[35m (13.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170325142108')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "events" ("name", "date", "ethnicity", "dietary_restrictions", "category") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Who Wants Some Grub?"], ["date", "1992-11-25 00:00:00.000000"], ["ethnicity", "---\nAsian: '1'\n"], ["dietary_restrictions", "---\nGluten free: '1'\n"], ["category", "---\nDinner: '1'\n"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients", "ethnicity", "dietary_restrictions", "category") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Meat festival"], ["date", "2017-11-22 00:00:00.000000"], ["description", "lots of meat"], ["ingredients", "meat"], ["ethnicity", "---\nFrench: '1'\n"], ["dietary_restrictions", "---\nGluten free: '1'\n"], ["category", "---\nLunch: '1'\n"]]
+  [1m[36m (15.2ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "events" ("name", "date", "ethnicity", "dietary_restrictions", "category") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Who Wants Some Grub?"], ["date", "1992-11-25 00:00:00.000000"], ["ethnicity", "---\nAsian: '1'\n"], ["dietary_restrictions", "---\nGluten free: '1'\n"], ["category", "---\nDinner: '1'\n"]]
+  [1m[35m (11.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "events" ("name", "date", "description", "ingredients", "ethnicity", "dietary_restrictions", "category") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Meat festival"], ["date", "2017-11-22 00:00:00.000000"], ["description", "lots of meat"], ["ingredients", "meat"], ["ethnicity", "---\nFrench: '1'\n"], ["dietary_restrictions", "---\nGluten free: '1'\n"], ["category", "---\nLunch: '1'\n"]]
+  [1m[36m (14.5ms)[0m  [1mcommit transaction[0m
+  [1m[36m (20.9ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "date" datetime, "description" text, "ingredients" text, "minPartySize" integer, "curPartySize" integer, "maxPartySize" integer, "location" varchar, "recipes" text, "image" varchar, "ethnicity" varchar, "dietary_restrictions" varchar, "category" varchar) [0m
+  [1m[35m (25.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "password" text) 
+  [1m[36m (16.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (25.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (18.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170418004419')[0m
+  [1m[35m (18.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170325161030')
+  [1m[36m (18.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170306172253')[0m
+  [1m[35m (21.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170325142108')
+
+
+Started GET "/events" for 128.226.119.250 at 2017-04-27 15:18:03 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (14.6ms)
+Completed 200 OK in 387ms (Views: 348.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/1" for 128.226.119.250 at 2017-04-27 15:18:07 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 35ms (Views: 23.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/1/edit" for 128.226.119.250 at 2017-04-27 15:18:09 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/_event_partial.html.haml (23.8ms)
+  Rendered events/edit.html.haml within layouts/application (33.7ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 128.226.119.250 at 2017-04-27 15:18:16 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/3" for 128.226.119.250 at 2017-04-27 15:18:18 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered events/show.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/events/3" for 128.226.119.250 at 2017-04-27 15:18:19 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"b40F9/Oug3LtIINlElFXWQ3XSfZpgi58cgjsBlhQHj473Bwvt4gX0m7/0sRCsEUGMorL/cjEEcjwG67L7mgz9w==", "id"=>"3"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 3]]
+  [1m[35m (16.5ms)[0m  commit transaction
+Redirected to https://cs445-workspace-jordar.c9users.io/events
+Completed 302 Found in 22ms (ActiveRecord: 17.3ms)
+
+
+Started GET "/events" for 128.226.119.250 at 2017-04-27 15:18:19 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 65ms (Views: 62.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/4" for 128.226.119.250 at 2017-04-27 15:18:21 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered events/show.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/events/4" for 128.226.119.250 at 2017-04-27 15:18:22 +0000
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TosTHOZ9BujaH70BBS2jDPGQDCoSLzt3kPCMA3jdAHYa2grEoluSSFnA7KBVzLFTzs2OIbNpBMMS487OzuUtvw==", "id"=>"4"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 4]]
+  [1m[35m (13.1ms)[0m  commit transaction
+Redirected to https://cs445-workspace-jordar.c9users.io/events
+Completed 302 Found in 20ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/events" for 128.226.119.250 at 2017-04-27 15:18:22 +0000
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"  ORDER BY "events"."date" ASC[0m
+  Rendered events/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 128.226.119.250 at 2017-05-01 20:41:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"  ORDER BY "events"."date" ASC
+  Rendered events/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 274ms (Views: 232.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events/1" for 128.226.119.250 at 2017-05-01 20:41:16 +0000
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/show.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 39ms (Views: 21.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/1/edit" for 128.226.119.250 at 2017-05-01 20:41:18 +0000
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/_event_partial.html.haml (28.5ms)
+  Rendered events/edit.html.haml within layouts/application (39.9ms)
+Completed 200 OK in 83ms (Views: 80.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1/edit" for 128.226.119.250 at 2017-05-01 20:43:32 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/_event_partial.html.haml (37.3ms)
+  Rendered events/edit.html.haml within layouts/application (77.8ms)
+Completed 200 OK in 655ms (Views: 556.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/events/1/edit" for 128.226.119.250 at 2017-05-01 20:45:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/_event_partial.html.haml (23.1ms)
+  Rendered events/edit.html.haml within layouts/application (32.0ms)
+Completed 200 OK in 351ms (Views: 300.0ms | ActiveRecord: 1.3ms)

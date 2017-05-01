@@ -13,15 +13,20 @@
 = label :event, :ethnicity, 'Ethnicity'
 - @ethnicity_options.each do |option|
   = option
-  = check_box_tag "event[ethnicity[#{option}]]", 1, @event.nil? ? false : @event.ethnicity.keys.include?(option) 
-
+  = @event.nil?
+  = @event.ethnicity.keys
+  = @event.ethnicity.keys.include?(option)
+  = check_box_tag "event[ethnicity[#{option}]]", 1, @event.nil? ? false : @event.ethnicity.keys.include?(option)
+  
 = label :event, :ethnicity, 'Dietary Restrictions'
 - @dietary_restrictions_options.each do |option|
   = option
+  
   = check_box_tag "event[dietary_restrictions[#{option}]]", 1, @event.nil? ? false : @event.dietary_restrictions.keys.include?(option)
     
 = label :event, :category, 'Category'
 - @category_options.each do |option|
   = option
+  
   = check_box_tag "event[category[#{option}]]", 1, @event.nil? ? false : @event.category.keys.include?(option)
 
