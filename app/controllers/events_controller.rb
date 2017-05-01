@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   
   def event_params
-    params.require(:event).permit(:name, :date, :description, :ingredients, :minPartySize, :curPartySize, :maxPartySize, :recipes, :location, :image, ethnicity: [:African, :American, :Asian, :French, :Indian, :Italian, :Latin_American, :Mediterranean, :Middle_Eastern, :Spanish, :NA], dietary_restrictions: [:Gluten_Free, :Nut_Free , :Vegetarian, :Vegan,  :Paleo, :Keto, :Kosher, :NA] , category: [:Potluck, :Restaurant, :Breakfast, :Brunch, :Lunch, :Dinner, :All_day, :Other])
+    params.require(:event).permit(:name, :date, :description, :ingredients, :minPartySize, :curPartySize, :maxPartySize, :recipes, :location, :image, ethnicity: [:African, :American, :Asian, :French, :Indian, :Italian, :Latin_american, :Mediterranean, :Middle_eastern, :Spanish, :NA], dietary_restrictions: [:Gluten_free, :Nut_free , :Vegetarian, :Vegan,  :Paleo, :Keto, :Kosher, :NA] , category: [:Potluck, :Restaurant, :Breakfast, :Brunch, :Lunch, :Dinner, :All_day, :Other])
   end
   
   def show

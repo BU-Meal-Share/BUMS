@@ -9,11 +9,11 @@ class Event < ActiveRecord::Base
     end
     
     def self.ethnicity_options
-        return [:African, :American, :Asian, :French, :Indian, :Italian, :Latin_American, :Mediterranean, :Middle_Eastern, :Spanish, :NA]
+        return [:African, :American, :Asian, :French, :Indian, :Italian, :Latin_american, :Mediterranean, :Middle_eastern, :Spanish, :NA]
     end
     
     def self.dietary_restrictions_options
-       return [:Gluten_Free, :Nut_Free , :Vegetarian, :Vegan,  :Paleo, :Keto, :Kosher, :NA] 
+       return [:Gluten_free, :Nut_free , :Vegetarian, :Vegan,  :Paleo, :Keto, :Kosher, :NA] 
     end
     
     def self.category_options
