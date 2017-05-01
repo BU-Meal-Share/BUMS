@@ -1,1 +1,2 @@
 log/*.log
+tmp/cache/assets/sprockets/v3.0/*
