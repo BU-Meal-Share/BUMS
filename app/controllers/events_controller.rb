@@ -1,8 +1,20 @@
 class EventsController < ApplicationController
+  before_action :require_permission, only: [:destroy]
   
   def event_params
     params.require(:event).permit(:name, :date, :description, :ingredients, :minPartySize, :curPartySize, :maxPartySize, :recipes, :location, :image, :user_id, ethnicity: [:African, :American, :Asian, :French, :Indian, :Italian, :Latin_american, :Mediterranean, :Middle_eastern, :Spanish, :NA], dietary_restrictions: [:Gluten_free, :Nut_free , :Vegetarian, :Vegan,  :Paleo, :Keto, :Kosher, :NA] , category: [:Potluck, :Restaurant, :Breakfast, :Brunch, :Lunch, :Dinner, :All_day, :Other])
   end
+  
+  def require_permission
+    if current_user.nil? or current_user.id != Event.find(params[:id]).user_id
+      redirect_to events_path and return
+    end
+  end
+  
+  def isOwner
+    return true if !current_user.nil? and current_user.id == Event.find(params[:id]).user_id
+  end
+  helper_method :isOwner
   
   def show
     id = params[:id]

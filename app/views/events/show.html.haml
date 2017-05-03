@@ -42,7 +42,8 @@
 
 %p#description= @event.description
 
-= link_to 'Edit', edit_event_path(@event)
+-if isOwner
+  = link_to 'Edit', edit_event_path(@event)
 -#= link_to 'Find Movies With Same Director', find_same_director_movie_path(@movie)
 = button_to 'Cancel Event', event_path(@event), :method => :delete 
 -#                                    (save for future), data: {:confirm => 'Are you sure?'}

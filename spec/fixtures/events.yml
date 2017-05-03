@@ -4,6 +4,7 @@ vegan_potluck:
     date: 2017-11-25
     description: Hi I love Vegan Food!
     ingredients:  lettuce, onion, tomato, soy
+    user_id: 1
 
 meat_festival:
     id: 2
@@ -11,6 +12,7 @@ meat_festival:
     date: 2017-10-20
     description: Jordans birthday dinner!
     ingredients: saussage, steak, chicken mofongo
+    user_id: 2
 
 taco_tuesday:
     id: 3
