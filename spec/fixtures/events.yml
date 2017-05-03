@@ -12,7 +12,7 @@ meat_festival:
     date: 2017-10-20
     description: Jordans birthday dinner!
     ingredients: saussage, steak, chicken mofongo
-    user_id: 1
+    user_id: 2
 
 taco_tuesday:
     id: 3

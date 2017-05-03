@@ -1,8 +1,8 @@
-Feature: user login
+Feature: owning events
   
     As a user,
-    so that I can easily login,
-    I want to be able to login through Google
+    so that so that no one else can delete or edit my event,
+    I want to be able to own an event
 
 Background:
   Given the following events exist:

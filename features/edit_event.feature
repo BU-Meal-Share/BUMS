@@ -7,15 +7,17 @@ Feature: edit an event
 Background: events have been added to the database
 
   Given the following events exist:
-  | name                         | date         | description | ingredients  |
-  | Who Wants Some Grub?         | 25-Nov-2017  | foo         | ants, grubs  |
-  | Food Co-op: Wednesday Lunch  | 26-Oct-2017  | foo         | piza, pasta  |
-  | Vegans ONLY!                 | 21-Jul-2017  | foo         | tofu, squash |
-  | Dinner on Main St            | 10-Aug-2017  | foo         | n/a          |
+  | name                         | date         | description | ingredients  | user_id |
+  | Who Wants Some Grub?         | 25-Nov-2017  | foo         | ants, grubs  | 1       |
+  | Food Co-op: Wednesday Lunch  | 26-Oct-2017  | foo         | piza, pasta  | 1       |
+  | Vegans ONLY!                 | 21-Jul-2017  | foo         | tofu, squash | 1       |
+  | Dinner on Main St            | 10-Aug-2017  | foo         | n/a          | 1       |
 
   And  I am on the BUMS home page
-  
+
+@omniauth_test  
 Scenario: Updating An Event
+  Given I am signed in with google
   When I follow "Who Wants Some Grub?"
   Then I should see "Who Wants Some Grub?"
   And I should see "Ingredients: ants, grubs"
@@ -28,8 +30,10 @@ Scenario: Updating An Event
   And I should see "testing was successfully updated"
   And I should see "testing"
   And I should not see "Who Wants Some Grub?"
-  
+
+@omniauth_test  
 Scenario: Canceling an edit
+  Given I am signed in with google
   When I follow "Who Wants Some Grub?"
   Then I should see "Who Wants Some Grub?"
   And I should see "Ingredients: ants, grubs"

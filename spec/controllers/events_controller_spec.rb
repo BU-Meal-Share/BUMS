@@ -139,23 +139,27 @@ describe EventsController do
     end
       
     describe "#destroy" do
-      fixtures :events
+      fixtures :events, :users
       
       before :each do
         @event = events(:vegan_potluck)
+        @user = users(:user_tmodell)
         @id = @event.id
         @name = @event.name
         @date = @event.date
         @description = @event.description
         @ingredients = @event.ingredients
+        allow(controller).to receive(:current_user).and_return(@user)
       end
       it "calls the find method to retrieve the event" do 
+        expect(Event).to receive(:find).with(@id.to_s).and_return(@event)
         expect(Event).to receive(:find).with(@id.to_s).and_return(@event)
         get :destroy,  {:id => @id}
       end 
       
       it "calls the destroy method to delete the event" do 
-        allow(Event).to receive(:find).with(@id.to_s).and_return(@event)
+        expect(Event).to receive(:find).with(@id.to_s).and_return(@event)
+        expect(Event).to receive(:find).with(@id.to_s).and_return(@event)
         expect(@event).to receive(:destroy)
         get :destroy,  {:id => @id}
       end
@@ -174,39 +178,22 @@ describe EventsController do
     end
     
     describe "#require_permission" do
-      fixtures :events
-      before :each do
-        @event = events(:vegan_potluck)
+      fixtures :events, :users
+      before do
+        @event = events(:meat_festival)
+        @id = @event.id
+        @user = users(:user_tmodell)
+        allow(controller).to receive(:current_user).and_return(@user)
       end
-       
-      auth = {
-        provider: "google",
-        uid: "12345678910",
-        info: {
-          name: "Jesse",
-        },
-        credentials: {
-          token: "abcdefg12345",
-          expires_at: DateTime.now
-        }
-      }
-      User.from_omniauth(auth)
+ 
       it "redirects to the index page" do
-        allow(Event).to receive(:find).with(@event.id.to_s).and_return(@event)
-        
-        #session[:user_id] = 2 
-        expect(@event).to receive(:destroy)
-        #allow(Event).to receive(:require_permission)
-        #get :require_permission
-        get :destroy,  {:id => @event.id}
-        #allow(Event).to receive(:require_permission)
-       
-        
+        expect(Event).to receive(:find).with(@id.to_s).and_return(@event)
+        get :destroy,  {:id => @id}
+        expect(response).to redirect_to(events_path)
       end
-    
-      #it "does not redirect to the index page" do
-        
-      #end
+      
+      
+
   end
 end 
 

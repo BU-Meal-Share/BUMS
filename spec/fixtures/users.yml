@@ -1,9 +1,9 @@
 user_tmodell:
+    provider: "google"
+    uid: "12345678910"
     id: 1
     name: tmodell
-    password: helloworld
-    
-user_jcipoll:
-    id: 2
-    name: jcipoll
-    password: goodbyeworld
+    oauth_token: "abcdefg12345"
+    oauth_expires_at: DateTime.now
+
+

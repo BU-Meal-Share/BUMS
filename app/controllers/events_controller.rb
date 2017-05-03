@@ -6,14 +6,12 @@ class EventsController < ApplicationController
   end
   
   def require_permission
-    p current_user
     if current_user.nil? or current_user.id != Event.find(params[:id]).user_id
-      redirect_to events_path
+      redirect_to events_path and return
     end
   end
   
   def isOwner
-    p current_user
     return true if !current_user.nil? and current_user.id == Event.find(params[:id]).user_id
   end
   helper_method :isOwner
