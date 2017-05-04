@@ -7,15 +7,17 @@ Feature: categorize tags
 Background:  events have been added to the database
 
     Given the following events exist:
-    | name                         | date         | description | ingredients  | minPartySize | curPartySize | maxPartySize | location | recipes        | image  | ethnicity         | dietary_restrictions | category            |
-    | Who Wants Some Grub?         | 25-Nov-2017  | foo         | ants, grubs  | 1            | 3            | 6            | my house | ants with lime | 42.jpg | {"Asian":"1"}     | {"Kosher" : "1"}     | {"All_day":"1"}       | 
-    | Food Co-op: Wednesday Lunch  | 26-Oct-2017  | foo         | piza, pasta  | 1            | 2            | 3            | n/a      | n/a            | 2.jpg  | {"Indian":"1"}    | {"Other":"1"}        | {"Restaurant":"1"} |
-    | Vegans ONLY!                 | 21-Jul-2017  | foo         | tofu, squash | 1            | 2            | 3            | n/a      | n/a            | 3.jpg  | {"African":"1"}   | {"Vegan":"1"}        | {"Potluck":"1"}    |
-    | Dinner on Main St            | 10-Aug-2017  | foo         | n/a          | 1            | 2            | 3            | n/a      | n/a            | 4.jpg  | {"French":"1"}    | {"Keto":"1"}         | {"Dinner":"1"}     |  
+    | name                         | date         | description | ingredients  | minPartySize | curPartySize | maxPartySize | location | recipes        | image  | ethnicity         | dietary_restrictions | category           | user_id |
+    | Who Wants Some Grub?         | 25-Nov-2017  | foo         | ants, grubs  | 1            | 3            | 6            | my house | ants with lime | 42.jpg | {"Asian":"1"}     | {"Kosher" : "1"}     | {"All_day":"1"}    | 1       |
+    | Food Co-op: Wednesday Lunch  | 26-Oct-2017  | foo         | piza, pasta  | 1            | 2            | 3            | n/a      | n/a            | 2.jpg  | {"Indian":"1"}    | {"Other":"1"}        | {"Restaurant":"1"} | 1       |
+    | Vegans ONLY!                 | 21-Jul-2017  | foo         | tofu, squash | 1            | 2            | 3            | n/a      | n/a            | 3.jpg  | {"African":"1"}   | {"Vegan":"1"}        | {"Potluck":"1"}    | 1       |
+    | Dinner on Main St            | 10-Aug-2017  | foo         | n/a          | 1            | 2            | 3            | n/a      | n/a            | 4.jpg  | {"French":"1"}    | {"Keto":"1"}         | {"Dinner":"1"}     | 1       |
 
     And  I am on the BUMS home page
 
+@omniauth_test
 Scenario: Viewing Ethnicity, Dietary Restrictions, and Category on Edit
+    Given I am signed in with google  
     When I follow "Who Wants Some Grub?"
     And I follow "Edit"
     Then I should see "Ethnicity"
@@ -45,8 +47,9 @@ Scenario: Viewing Ethnicty, Dietary Restrictions, and Category on Index
     And I should see "Potluck"
     And I should see "Dinner"
 
-
+@omniauth_test
 Scenario: Viewing checked boxes on Edit
+    Given I am signed in with google
     When I follow "Who Wants Some Grub?"
     And I follow "Edit"
     Then the "event_ethnicity_Asian" checkbox should be checked
