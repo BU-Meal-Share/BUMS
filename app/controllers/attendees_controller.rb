@@ -13,13 +13,6 @@ class AttendeesController < ApplicationController
       redirect_to events_path
     end
   end
-  
-=begin
-  private
-  def event_params
-    params.require(:event).permit(:name, :date, :description, :ingredients, :minPartySize, :curPartySize, :maxPartySize, :tags, :recipes, :location, :image, :user_id)
-  end
-=end
 
   public
   def create
@@ -33,6 +26,7 @@ class AttendeesController < ApplicationController
     @event = Event.find_by_id(params[:event_id])
     redirect_to event_path(@event)
   end
+  
   def destroy
     @attendee = Attendee.find(params[:id])
     @attendee.destroy
