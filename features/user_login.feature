@@ -20,5 +20,3 @@ Scenario: a user logs out
   And I follow "Sign out"
   Then I should see "Sign in with Google"
   
-
-  
