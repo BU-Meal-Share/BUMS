@@ -6,9 +6,9 @@
   Signed in as
   = succeed "!" do
     %strong= current_user.name
-  = link_to "Sign out", signout_path, id: "sign_out"
+  = link_to "Sign out", signout_path, id: "sign_out", :class => "link"
 - else
-  = link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in"
+  = link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in", :class => "link"
 
   = yield
 
@@ -16,15 +16,15 @@
 
 %h1 All Events
 
-= form_tag events_path, :method => :get, :id => 'date_range_form' do
+= form_tag events_path, :method => :get, :id => 'date_range_form', :class => "form"  do
   %input{type: "date", required: true, name: "start", value: @start}
   %input{type: "date", required: true, name: "end", value: @end}
   = submit_tag 'Filter'
 
-= form_tag events_path, :method => :get, :id => "sort_form" do
+= form_tag events_path, :method => :get, :id => "sort_form", :class => "form" do
   Include:
   - @sort_options.each do |option|
-    -#    = option
+    = option
     = check_box_tag "sort[#{option}]", 1, @sort.include?(option), :id => "option_#{option}"
   = submit_tag 'Sort', :id => "options_submit"
 
@@ -39,12 +39,12 @@
   %tbody
     - @events.each do |event|
       %tr
-        %td= link_to "#{event.name}", event_path(event)
+        %td= link_to "#{event.name}", event_path(event), :class => "table_link"
         %td= event.date
         %td= event.ethnicity
         %td= event.dietary_restrictions
         %td= event.category
         
-    = link_to 'Create new event', new_event_path 
+    = link_to 'Create new event', new_event_path , :class => "link"
 
 

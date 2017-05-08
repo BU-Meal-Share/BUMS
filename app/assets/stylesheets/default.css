@@ -1,3 +1,103 @@
 .hidden {
     display: none;
 }
+
+.form{
+  
+  margin: 0 auto; 
+  width: 250px
+}
+
+.link{
+    text-align: center;
+    display: block;
+    color: White;
+}
+
+.left_link{
+  
+  color: White;
+}
+
+#attend_link{
+  color: White;
+  
+}
+
+#nevermind_link{
+  color: White;
+}
+
+
+.table_link{
+  
+  color: White;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+html, body {
+  margin: 0 auto;
+  padding: 0 20px 20px;
+  background: Black;
+  color: Grey;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 10pt;
+}
+/*div#main {*/
+/*  margin: 0;*/
+/*  padding: 0 20px 20px;*/
+/*}*/
+
+/*a {*/
+/*  margin: 0 auto; */
+/*  width: 250px;*/
+/*  background: transparent;*/
+/*  color: White;*/
+/*  text-decoration: underline;*/
+/*  font-weight: bold;*/
+/*}*/
+h1 {
+  margin: 0 auto;
+  color: White;
+  font-size: 150%;
+  font-style: italic;
+  display: block;
+  width: 70%;
+  border-bottom: 1px solid DarkSlateGrey;
+}
+h1.title {
+  margin-left:auto; 
+  margin-right:auto;
+  padding: 10px;
+  background-color: Grey;
+  color: white;
+  border-bottom: 4px solid White;
+  font-size: 2em;
+  font-style: normal;
+}
+table#events {
+  margin-left:auto; 
+  margin-right:auto;
+  border-collapse: collapse;
+  width: 70%;
+  border-bottom: 2px transparent grey;
+}
+table#events th {
+  border: 2px solid White;
+  font-weight: bold;
+  background-color: Black;
+}
+table#events th, table#events td {
+  padding: 4px;
+  text-align: left;
+}
+
+#notice #warning {
+  background: rosybrown;
+  margin: 1em 0;
+  padding: 4px;
+}
+
+
+
