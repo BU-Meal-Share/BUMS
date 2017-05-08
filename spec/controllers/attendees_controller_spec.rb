@@ -3,15 +3,12 @@ require 'rails_helper'
 describe AttendeesController do
     context 'when not logged in' do
         describe "#create" do
-            fixtures :attendees
-            
+
             before :each do
                 @id = "1"
                 @event = double(:id => @id)
                 @user = nil
-                #@attendee = double(:id => @id, :user_id => @id, :event_id => @id)
-                @attendee = attendees(:attendee_1)
-                @params = {event_id: @event.id, id: @attendee.id}
+                @params = {event_id: @event.id}
                 @session[:user_id] = ''
             end
             
@@ -28,7 +25,12 @@ describe AttendeesController do
                 allow(User).to receive(:find_by_id).and_return(@user)
                 post :create, @params
                 expect(flash[:warning]).to eq("You must be logged in to Attend an event.")
-            end     
+            end    
+            it "redirects to events page" do
+                allow(User).to receive(:find_by_id).and_return(@user)
+                post :create, @params
+                expect(response).to redirect_to event_path(@params[:event_id])
+            end
         end
         describe "#destroy" do
             fixtures :attendees
@@ -37,7 +39,6 @@ describe AttendeesController do
                 @id = "1"
                 @event = double(:id => @id)
                 @user = nil
-                #@attendee = double(:id => @id, :user_id => @id, :event_id => @id)
                 @attendee = attendees(:attendee_1)
                 @params = {event_id: @event.id, id: @attendee.id}
                 @session[:user_id] = ''
@@ -54,17 +55,21 @@ describe AttendeesController do
                 delete :destroy, @params
             end
             
-            it 'Send warning message' do 
+            it 'Send warning message for need to log in' do 
                 allow(User).to receive(:find_by_id).and_return(@user)
                 delete :destroy, @params
                 expect(flash[:warning]).to eq("You must be logged in to Attend an event.")
-            end            
+            end    
+            it "redirects to events page" do
+                allow(User).to receive(:find_by_id).and_return(@user)
+                delete :destroy, @params
+                expect(response).to redirect_to event_path(@params[:event_id])
+            end
         end
     end
-=begin
+    
     context 'when event does not exist' do
         describe "#create" do
-            fixtures :attendees
             
             before :each do
                 auth = {
@@ -80,29 +85,79 @@ describe AttendeesController do
                 }
                 User.from_omniauth(auth)
                 
-                @id = nil
+                @id = "1"
                 @event = double(:id => @id)
                 @user = User.first
-                #@attendee = double(:id => @id, :user_id => @id, :event_id => @id)
+                @params = {event_id: @event.id, user_id: @user.id}
+                @session[:user_id] = @user.id
+            end
+            
+            it 'Query Event for Where' do 
+                allow(User).to receive(:find_by_id).and_return(@user)
+                expect(Event).to receive(:where).with(:id => @params[:event_id])
+                post :create, @params
+            end      
+            it 'Send warning message for event not existing' do 
+                allow(User).to receive(:find_by_id).and_return(@user)
+                allow(Event).to receive(:where)
+                post :create, @params
+                expect(flash[:warning]).to eq("Attending must be for an existing event.")
+            end       
+            it "redirects to events page" do
+                allow(User).to receive(:find_by_id).and_return(@user)
+                allow(Event).to receive(:where)
+                post :create, @params
+                expect(response).to redirect_to events_path
+            end
+        end
+        describe "#destroy" do
+            
+            fixtures :attendees
+            
+            before :each do
+                auth = {
+                    provider: "google",
+                    uid: "12345678910",
+                    info: {
+                        name: "Jesse",
+                    },
+                    credentials: {
+                        token: "abcdefg12345",
+                        expires_at: DateTime.now
+                    }
+                }
+                User.from_omniauth(auth)
+                @id = "1"
+                @event = double(:id => @id)
+                @user = User.first
                 @attendee = attendees(:attendee_1)
                 @params = {event_id: @event.id, id: @attendee.id}
                 @session[:user_id] = @user.id
             end
             
-            it 'Checks if current_user is Nil' do
+            it 'Query Event for Where' do 
                 allow(User).to receive(:find_by_id).and_return(@user)
-                expect(Event).to receive(:where).with(:id => @params).and_return(nil)
-                post :create, @params
+                expect(Event).to receive(:where).with(:id => @params[:event_id])
+                delete :destroy, @params
+            end  
+            it 'Send warning message for event not existing' do 
+                allow(User).to receive(:find_by_id).and_return(@user)
+                allow(Event).to receive(:where)
+                delete :destroy, @params
+                expect(flash[:warning]).to eq("Attending must be for an existing event.")
+            end
+            
+            it "redirects to events page" do
+                allow(User).to receive(:find_by_id).and_return(@user)
+                allow(Event).to receive(:where)
+                delete :destroy, @params
+                expect(response).to redirect_to events_path
             end
         end
-        describe "#destroy" do
-        end
     end
-=end
+
     context 'When logged in' do
         describe "#create" do
-            #fixtures :users
-            #fixtures :events
             fixtures :attendees
             
             before :each do
@@ -118,15 +173,11 @@ describe AttendeesController do
                     }
                 }
                 User.from_omniauth(auth)
-                
-                
-                #@event = events(:vegan_potluck)
+
                 @id = "1"
                 @event = double(:id => @id)
                 @user = User.first
-                #@attendee_attributes = FactoryGirl.attributes_for(:attendee, :event_id => @event)
                 @attendee = attendees(:attendee_1)
-                #@params = double(:event_id => @event.id , :user_id => @user.id)
                 @params = {event_id: @event.id, user_id: @user.id}
                 @session[:user_id] = @user.id
             end
@@ -148,7 +199,13 @@ describe AttendeesController do
                 expect(Event).to receive(:find_by_id).with(@event.id).and_return(@event)
                 post :create, @params
             end
-            
+            it "redirects to event show page" do
+                allow(User).to receive(:find_by_id).and_return(@user)
+                allow(Attendee).to receive(:create!).and_return(@attendee)
+                allow(Event).to receive(:find_by_id).and_return(@event)
+                post :create, @params
+                expect(response).to redirect_to event_path(@event)
+            end
         end
         describe '#destroy' do
             fixtures :attendees
@@ -200,17 +257,14 @@ describe AttendeesController do
                 expect(Event).to receive(:find_by_id).with(@event.id).and_return(@event)
                 delete :destroy, @params
             end
-=begin            
             it "redirects to event show page" do
                 allow(User).to receive(:find_by_id).and_return(@user)
                 allow(Attendee).to receive(:find).and_return(@attendee)
                 allow(@attendee).to receive(:destroy)
                 allow(Event).to receive(:find_by_id).and_return(@event)
-                expect(response).to redirect_to(event_path(@id))
                 delete :destroy, @params
-
+                expect(response).to redirect_to event_path(@event)
             end
-=end
         end
     end
 end
