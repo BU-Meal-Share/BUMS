@@ -14,7 +14,7 @@
 
   
 %h1 All Event
-= form_tag events_path, :method => :get, :id => 'search_form' do
+= form_tag events_path, :method => :get, :id => 'search_form' , :class => "form" do
   %input{name: "search", value: @search}
   = submit_tag 'Search Event Titles'
 
