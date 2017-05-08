@@ -13,8 +13,10 @@
   = yield
 
   
-
-%h1 All Events
+%h1 All Event
+= form_tag events_path, :method => :get, :id => 'search_form' do
+  %input{name: "search", value: @search}
+  = submit_tag 'Search Event Titles'
 
 = form_tag events_path, :method => :get, :id => 'date_range_form' do
   %input{type: "date", required: true, name: "start", value: @start}
@@ -24,7 +26,7 @@
 = form_tag events_path, :method => :get, :id => "sort_form" do
   Include:
   - @sort_options.each do |option|
-    -#    = option
+    = option
     = check_box_tag "sort[#{option}]", 1, @sort.include?(option), :id => "option_#{option}"
   = submit_tag 'Sort', :id => "options_submit"
 

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   root 'events#index'
   resources :events do
       resources :attendees
+      #collection {get 'search'}
   end
   #resources :users do
     # Creates users/login(.:format)  users#login

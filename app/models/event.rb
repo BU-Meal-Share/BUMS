@@ -22,5 +22,9 @@ class Event < ActiveRecord::Base
     def self.category_options
         return [:Potluck, :Restaurant, :Breakfast, :Brunch, :Lunch, :Dinner, :All_day, :Other]
     end
+    
+    def self.search_by_name search_term
+        return Event.where("name like ?", "%#{search_term}%").to_a
+    end
 
 end

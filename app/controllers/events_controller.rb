@@ -41,13 +41,16 @@ class EventsController < ApplicationController
     session[:end]   = '' unless session.has_key?  :end
     session[:sort]  = ['date'] unless session.has_key? :sort
     
-    @start = params[:start] || session[:start]
-    @end   = params[:end]   || session[:end]
-    @sort  = params[:sort]  || session[:sort]
+    @start  = params[:start] || session[:start]
+    @end    = params[:end]   || session[:end]
+    @sort   = params[:sort]  || session[:sort]
+    @search = params[:search]
     
     @sort  = @sort.keys unless @sort.class == Array
     
-    if @start.blank? or @end.blank?
+    if not @search.blank?
+      @events = Event.search_by_name @search
+    elsif @start.blank? or @end.blank?
       @events = Event.all
     else
       @events = Event.where(:date => @start.to_time..@end.to_time)
