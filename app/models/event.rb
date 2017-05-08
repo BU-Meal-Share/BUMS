@@ -4,6 +4,9 @@ class Event < ActiveRecord::Base
     serialize :dietary_restrictions, Hash
     serialize :category, Hash
     
+    has_many :attendees
+    has_many :users, :through => :attendees
+
     def self.sort_options
         return ['name','date']
     end
@@ -19,4 +22,5 @@ class Event < ActiveRecord::Base
     def self.category_options
         return [:Potluck, :Restaurant, :Breakfast, :Brunch, :Lunch, :Dinner, :All_day, :Other]
     end
+
 end

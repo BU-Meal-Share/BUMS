@@ -13,6 +13,13 @@
 
 ActiveRecord::Schema.define(version: 20170423203354) do
 
+  create_table "attendees", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.datetime "date"
@@ -24,10 +31,10 @@ ActiveRecord::Schema.define(version: 20170423203354) do
     t.string   "location"
     t.text     "recipes"
     t.string   "image"
-    t.integer  "user_id"
     t.string   "ethnicity"
     t.string   "dietary_restrictions"
     t.string   "category"
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|

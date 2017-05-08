@@ -101,6 +101,22 @@ describe EventsController do
         @date = @event.date
         @description = @event.description
         @ingredients = @event.ingredients
+        
+        auth = {
+          provider: "google",
+          uid: "12345678910",
+          info: {
+            name: "Jesse",
+          },
+          credentials: {
+            token: "abcdefg12345",
+            expires_at: DateTime.now
+          }
+        }
+        User.from_omniauth(auth)
+        @user = User.first
+        @session[:user_id] = @user.id
+        @hidden = 'hidden'
       end
       
       context 'finds all events on homepage' do
@@ -113,6 +129,23 @@ describe EventsController do
         it "sends event to view" do
           get :show, {:id => @id}
           expect(assigns(:event)).to eq(@event)
+        end
+      end
+      
+      context 'user is already attending' do
+
+        it "checks for user" do
+          expect(User).to receive(:find_by_id).with(@session).and_return(@user)
+          get :show, {:id => @id}
+        end
+
+        it "sets values for view" do
+          allow(User).to receive(:find_by_id).and_return(@user)
+          allow(@event).to receive(:users).and_return(true)
+          get :show, {:id => @id}
+          expect(assigns :attend_class).to eq(@hidden)
+          expect(assigns :attend_text).to eq(@hidden)
+          expect(assigns :nevermind_text).to eq('Nevermind?')
         end
       end
     end
@@ -192,8 +225,6 @@ describe EventsController do
         expect(response).to redirect_to(events_path)
       end
       
-      
-
   end
 end 
 

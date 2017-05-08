@@ -19,6 +19,18 @@ class EventsController < ApplicationController
   def show
     id = params[:id]
     @event = Event.find(id)
+    
+    @attendee = 'default'
+    @attend_text = 'Attend Event?'
+    @nevermind_text = 'Nevermind?'
+    @user = User.find_by_id(session[:user_id])
+    if not @user.nil? and @event.users.include? @user
+        @attend_class, @attend_text = 'hidden', 'hidden'
+        @attendee = @event.attendees.find_by_user_id(@user.id)
+      else
+        @nevermind_class, @nevermind_text = 'hidden', 'hidden'
+    end
+    
   end
 
   def index
