@@ -32,15 +32,24 @@ describe EventsController do
         @event1 = events(:vegan_potluck)
         @event2 = events(:meat_festival)
         @event3 = events(:taco_tuesday)
-        @fake_results = [@event1,@event2,@event3]
-        @fake_filtered_results = [@event2, @event3]
-        @fake_sort_by_name = [@event2,@event3,@event1]
-        @fake_sort_by_date = [@event3,@event2,@event1]
+        @event4 = events(:vegan_not_potluck)
+        @fake_results = [@event1,@event2,@event3,@event4]
+        @fake_filtered_results = [@event2, @event3, @event4]
+        @fake_sort_by_name = [@event2,@event3,@event1,@event4]
+        @fake_sort_by_date = [@event3,@event4,@event2,@event1]
         @start = '5-Jan-2017'
         @end = '31-Oct-2017'
+        @empty_results = []
+        @fake_results_2 = [@event1, @event4]
+        @good_term = "vegan"
+        @bad_term = "hello"
       end
       
+
+      
       context 'finds all events on homepage' do
+        
+      
       
         it "finds all events" do
           expect(Event).to receive(:all)
@@ -88,6 +97,35 @@ describe EventsController do
         end
         
       end
+      
+      context 'search by name' do
+        
+        #happy path
+        it "finds results for valid search" do
+          expect(Event).to receive(:search_by_name).with(@good_term).and_return(@fake_results_2)
+          get :index, {:search => @good_term}
+        end
+        
+        it "assigns the variable" do
+          allow(Event).to receive(:search_by_name).with(@good_term).and_return(@fake_results_2)
+          get :index, {:search => @good_term}
+          expect(assigns(:events)).to eq(@fake_results_2)
+        end
+        
+        #sad path
+        it "doesn't finds results for invalid search" do
+          expect(Event).to receive(:search_by_name).with(@bad_term).and_return(@empty_results)
+          get :index, {:search => @bad_term}
+        end
+        
+        it "assigns the variable" do
+          allow(Event).to receive(:search_by_name).with(@bad_term).and_return(@empty_results)
+          get :index, {:search => @bad_term}
+          expect(assigns(:events)).to eq(@empty_results)
+        end
+        
+      end
+      
       
     end
     

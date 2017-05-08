@@ -20,3 +20,8 @@ taco_tuesday:
     date: 2017-05-05
     description: Taco Tuesday, but not on a Tuesday...
     ingredients: tacos, burritos, chimichangas
+    
+vegan_not_potluck:
+    id: 4
+    name: Vegan anti-potluck!
+    date: 2017-05-06
