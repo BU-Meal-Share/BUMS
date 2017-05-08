@@ -25,10 +25,10 @@ class EventsController < ApplicationController
     @nevermind_text = 'Nevermind?'
     @user = User.find_by_id(session[:user_id])
     if not @user.nil? and @event.users.include? @user
-        @attend_class, @attend_text = 'hidden'
+        @attend_class, @attend_text = 'hidden', 'hidden'
         @attendee = @event.attendees.find_by_user_id(@user.id)
       else
-        @nevermind_class, @nevermind_text = 'hidden'
+        @nevermind_class, @nevermind_text = 'hidden', 'hidden'
     end
     
   end
