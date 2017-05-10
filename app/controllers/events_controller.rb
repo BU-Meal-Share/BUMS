@@ -51,10 +51,13 @@ class EventsController < ApplicationController
     
     if not @search.blank?
       @events = Event.search_by_name @search
+      @title = "Search Results"
     elsif @start.blank? or @end.blank?
       @events = Event.all
+      @title = "All Events"
     else
       @events = Event.where(:date => @start.to_time..@end.to_time)
+      @title = "All Events"
     end
     
     @sort.each do |option|
