@@ -43,7 +43,4 @@ Scenario: A user cannot delete an event if user is not the owner
   Given I am signed in with google
   Then I should see "googleuser"
   When I follow "Vegans ONLY!"
-  When I press "Cancel Event"
-  Then I should be on the BUMS home page
-  And I should not see "Vegans ONLY!' deleted"
-  And I should see "Vegans ONLY!" after "Event Title"
+  Then I should not see "Cancel Event"

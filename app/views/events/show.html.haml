@@ -58,7 +58,7 @@
 
 -if isOwner
   = link_to 'Edit', edit_event_path(@event), :class => "left_link"
-
-= button_to 'Cancel Event', event_path(@event), :method => :delete
+-if isOwner
+  = button_to 'Cancel Event', event_path(@event), :method => :delete
 -#                                    (save for future), data: {:confirm => 'Are you sure?'}
 = link_to 'Back to Home', events_path, :class => "left_link"
