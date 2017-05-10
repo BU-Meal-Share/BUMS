@@ -1,6 +1,8 @@
 Binghamton-University-Meal-Share
 ===
 
+[![Code Quality](https://codeclimate.com/badge.png)](https://codeclimate.com/github/BU-Meal-Share/BUMS)
+
 This is the repo for the class project of Binghamton-University-Meal-Share
 
 Setup
