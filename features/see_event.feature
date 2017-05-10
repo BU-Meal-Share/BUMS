@@ -20,7 +20,7 @@ Scenario: Viewing An Event
   Then I should see "Who Wants Some Grub?"
   And I should see "Ingredients: ants, grubs"
   And I should see "Description: foo"
-  And I should see "Date: 25-Nov-2017"
+  And I should see "Date: 11/25/2017"
   And I should see the image "42.jpg"
 
 Scenario: Return to Home Page
@@ -33,7 +33,7 @@ Scenario: Viewing an Event with additional info
   Then I should see "Who Wants Some Grub?"
   And I should see "Ingredients: ants, grubs"
   And I should see "Description: foo"
-  And I should see "Date: 25-Nov-2017"
+  And I should see "Date: 11/25/2017"
   And I should see "MinPartySize: 1"
   And I should see "CurrentPartySize: 3"
   And I should see "MaxPartySize: 6"

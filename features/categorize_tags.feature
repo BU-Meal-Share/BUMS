@@ -42,7 +42,7 @@ Scenario: Viewing Ethnicty, Dietary Restrictions, and Category on Index
     And I should see "Other"
     And I should see "Vegan"
     And I should see "Keto"
-    And I should see "All_day"
+    And I should see "All day"
     And I should see "Restaurant"
     And I should see "Potluck"
     And I should see "Dinner"
