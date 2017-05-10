@@ -19,6 +19,7 @@ class EventsController < ApplicationController
   def show
     id = params[:id]
     @event = Event.find(id)
+    @owner = User.find_by_id(@event.user_id)
     
     @attendee = 'default'
     @attend_text = 'Attend Event?'
@@ -50,10 +51,13 @@ class EventsController < ApplicationController
     
     if not @search.blank?
       @events = Event.search_by_name @search
+      @title = "Search Results"
     elsif @start.blank? or @end.blank?
       @events = Event.all
+      @title = "All Events"
     else
       @events = Event.where(:date => @start.to_time..@end.to_time)
+      @title = "All Events"
     end
     
     @sort.each do |option|
@@ -76,6 +80,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.create!(event_params)
+    @event.update_attributes({:user_id => session[:user_id]})
     
     flash[:notice] = "#{@event.name} was successfully created."
     redirect_to events_path

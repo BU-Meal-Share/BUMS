@@ -8,17 +8,20 @@ describe EventsController do
       let(:event) { double('event', params) }
       
       it "calls the model method to create a new event" do
+        allow(event).to receive(:update_attributes)
         expect(Event).to receive(:create!).with(params).and_return(event)
         post :create, event: params
       end
       
       it "sets the flash message" do
+        allow(event).to receive(:update_attributes)
         allow(Event).to receive(:create!).with(params).and_return(event)
         post :create, event: params
         expect(flash[:notice]).to match(/^.* was successfully created.$/) 
       end
       
       it "redirects to the events index" do
+        allow(event).to receive(:update_attributes)
         allow(Event).to receive(:create!).with(params).and_return(event)
         post :create, event: params
         expect(response).to redirect_to(events_path)
@@ -173,6 +176,7 @@ describe EventsController do
 
         it "checks for user" do
           expect(User).to receive(:find_by_id).with(@session).and_return(@user)
+          allow(User).to receive(:find_by_id).with(@event.user_id).and_return(@user)
           get :show, {:id => @id}
         end
 
