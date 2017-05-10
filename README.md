@@ -50,4 +50,4 @@ To follow our procedure for contributing by creating branchs and pull request:
 https://www.agileventures.org/projects/binghamton-university-meal-share/documents/creating-and-pushing-a-branch
 
 Our Production Website that is updated when the Master is Merged:
-https://bums.herokuapp.com/This is the repository for Binghamton University Meal Share
+https://bums.herokuapp.com/
