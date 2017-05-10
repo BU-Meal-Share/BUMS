@@ -42,11 +42,11 @@
     - @events.each do |event|
       %tr
         %td= link_to "#{event.name}", event_path(event), :class => "table_link"
-        %td= event.date
-        %td= event.ethnicity
-        %td= event.dietary_restrictions
-        %td= event.category
-        
+        %td= event.date.strftime("%m/%d/%Y at %I:%M%p")
+        %td= event.ethnicity.keys.to_s[/^\[(.*)\]$/, 1].gsub('_', ' ').delete '"'
+        %td= event.dietary_restrictions.keys.to_s[/^\[(.*)\]$/, 1].gsub('_', ' ').delete '"'
+        %td= event.category.keys.to_s[/^\[(.*)\]$/, 1].gsub('_', ' ').delete '"'
+
     = link_to 'Create new event', new_event_path , :class => "link"
 
 

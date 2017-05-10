@@ -126,7 +126,6 @@ describe EventsController do
         
       end
       
-      
     end
     
     describe "#show" do
