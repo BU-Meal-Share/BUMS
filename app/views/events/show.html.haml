@@ -1,6 +1,7 @@
 -# in app/views/events/show.html.haml
 
 %h2= @event.name
+%h3= "Hosted by: " + @owner.name unless @owner.nil?
 
 %ul#details
   %li

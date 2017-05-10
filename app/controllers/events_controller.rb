@@ -19,6 +19,7 @@ class EventsController < ApplicationController
   def show
     id = params[:id]
     @event = Event.find(id)
+    @owner = User.find_by_id(@event.user_id)
     
     @attendee = 'default'
     @attend_text = 'Attend Event?'
@@ -76,6 +77,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.create!(event_params)
+    @event.update_attributes({:user_id => session[:user_id]})
     
     flash[:notice] = "#{@event.name} was successfully created."
     redirect_to events_path
