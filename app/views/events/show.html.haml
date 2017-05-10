@@ -5,7 +5,7 @@
 %ul#details
   %li
     Date:
-    = @event.date.strftime("%d-%b-%Y")
+    = @event.date.strftime("%m/%d/%Y at %I:%M%p")
   %li
     Ingredients:
     = @event.ingredients
@@ -28,13 +28,13 @@
     =image_tag @event.image
   %li
     Ethnicity:
-    = @event.ethnicity
+    = @event.ethnicity.keys.to_s[/^\[(.*)\]$/, 1].gsub('_', ' ').delete '"'
   %li
     Dietary Restrictions:
-    = @event.dietary_restrictions
+    = @event.dietary_restrictions.keys.to_s[/^\[(.*)\]$/, 1].gsub('_', ' ').delete '"'
   %li
     Category:
-    = @event.category
+    = @event.category.keys.to_s[/^\[(.*)\]$/, 1].gsub('_', ' ').delete '"'
     
   
 
